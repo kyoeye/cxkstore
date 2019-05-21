@@ -10,6 +10,8 @@
 </head>
 <body>
         <div>
+                    <button id="Button2"  class="button" runat="server">登录</button><br />
+                    <button id="Button3"  class="button" runat="server">登录</button><br />
                     <button id="Button1"  class="button" runat="server">登录</button><br />
              
         </div>
