@@ -78,6 +78,7 @@
     <Content Include="Mainpage.aspx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Zhucepage.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -111,6 +112,13 @@
     </Compile>
     <Compile Include="UserLogin.aspx.designer.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Zhucepage.aspx.cs">
+      <DependentUpon>Zhucepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Zhucepage.aspx.designer.cs">
+      <DependentUpon>Zhucepage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
