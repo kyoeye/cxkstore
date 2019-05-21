@@ -71,6 +71,7 @@
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\CXKstyle.css" />
     <Content Include="Global.asax" />
     <Content Include="GWCpage.aspx" />
     <Content Include="images\timgQM1F6PZZ.jpg" />

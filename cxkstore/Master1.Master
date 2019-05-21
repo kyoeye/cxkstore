@@ -12,8 +12,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <div>
-                <h1>这是一个模板页</h1>
+            <div style="background-color:#333333;color:white;padding:5px;height:40px;">
+                <h1 style="float:left;font-size:16px; margin:0 auto">这是一个模板页</h1>
+                <div style="float:right;padding:0px;margin:0 auto;">
+                    <asp:Button Text="text" runat="server" Height="40px" />
+                </div>
             </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

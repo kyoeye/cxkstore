@@ -6,6 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <link href="../css/CXKstyle.css" rel="stylesheet" type="text/css" />
     <style>
         .logincss {
             overflow: hidden;
@@ -64,9 +65,12 @@
         .ccenter{
             margin:0 auto;
         }
+        .linkbuttoncss{
+            margin:0 0 0 20px;
+        }
     </style>
 </head>
-<body style="background-image: url(images/timgQM1F6PZZ.jpg); background-attachment: fixed; background-position: center">
+<body style="background-image: url(images/timgQM1F6PZZ.jpg); background-color:#333333; b ; background-attachment: fixed; background-position: center">
     <form id="form1" runat="server">
         <div>
             <div  class="logincss">
@@ -96,14 +100,14 @@
                         </table>
                     </div>
                     <br />
-                    <button id="LoginButton1" class="btncss" runat="server">登录</button><br />
-
-                    <asp:LinkButton ID="ZCButton"   Text="有账号就登录，没账号就注册" Font-Size="10" runat="server" />
+                    <button id="LoginButton1" class="btncss_black" runat="server">登录</button> <!--想了下改用外联样式了-->
+                    <asp:LinkButton ID="ZCButton"   Text="新用户注册" CssClass="linkbuttoncss"  OnClick="ZCButton_Click" Font-Size="10" runat="server" />
                 </div>
             </div>
 
         </div>
 
     </form>
+
 </body>
 </html>

@@ -1,0 +1,78 @@
+﻿body {
+}
+/*居中的div（勉强能用*/
+.divJZ {
+    overflow: hidden;
+    background-color: white;
+    width: 600px;
+    height: 700px;
+    text-align:center;
+    padding:20px;
+    border-radius: 5px;
+   margin:0 auto;
+}
+/*按钮*/
+.btncss {
+    color: #ffffff;
+    border: none;
+    font-family: 'Microsoft YaHei';
+    background-color: #45aee2;
+    border-radius: 5px;
+    padding:7px 20px 7px 20px;
+    width: auto;
+    height: auto;
+}
+    .btncss:hover {
+        color: #fff;
+        border: none;
+        font-family: 'Microsoft YaHei';
+        background-color: #459fe2;
+        border-radius: 5px;
+        padding: 7px 20px 7px 20px;
+        width: auto;
+        height: auto;
+    }
+    .btncss:active {
+        color: #fff;
+        border: none;
+        font-family: 'Microsoft YaHei';
+        background-color: #2c7ebb;
+        border-radius: 5px;
+        padding: 7px 20px 7px 20px;
+        width: auto;
+        height: auto;
+    }
+
+/*按钮-炫酷黑*/
+.btncss_black {
+    color: #ffffff;
+    border: none;
+    font-family: 'Microsoft YaHei';
+    background-color: #1c1b1b;
+    border-radius: 5px;
+    padding: 7px 20px 7px 20px;
+    width: auto;
+    height: auto;
+}
+
+    .btncss_black:hover {
+        color: #fff;
+        border: none;
+        font-family: 'Microsoft YaHei';
+        background-color: #534e4e;
+        border-radius: 5px;
+        padding: 7px 20px 7px 20px;
+        width: auto;
+        height: auto;
+    }
+
+    .btncss_black:active {
+        color: #fff;
+        border: none;
+        font-family: 'Microsoft YaHei';
+        background-color: #1c1b1b;
+        border-radius: 5px;
+        padding: 7px 20px 7px 20px;
+        width: auto;
+        height: auto;
+    }

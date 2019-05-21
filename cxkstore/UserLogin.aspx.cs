@@ -13,5 +13,11 @@ namespace cxkstore
         {
 
         }
+
+        protected void ZCButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Zhucepage.aspx");
+
+        }
     }
 }

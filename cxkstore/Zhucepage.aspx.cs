@@ -13,5 +13,10 @@ namespace cxkstore
         {
 
         }
+
+        protected void loginbtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserLogin.aspx");
+        }
     }
 }
