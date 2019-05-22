@@ -18,5 +18,15 @@ namespace cxkstore
         {
             Response.Redirect("UserLogin.aspx");
         }
+
+        protected void ZhuCebtn_Click(object sender, EventArgs e)
+        {
+            string Name, Sex, Password, DiZhi, PhoneNum;
+            Name = name.Value;
+            Password = password.Value;
+            DiZhi = dizhi.Value;
+            Sex = Radbtnl.SelectedItem.Value;//获取一个数字，数据库也是存数字
+            PhoneNum = phonenum.Value;
+        }
     }
 }

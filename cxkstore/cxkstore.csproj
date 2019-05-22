@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\CXKdb.mdf" />
+    <Content Include="App_Data\CXKdb_log.ldf">
+      <DependentUpon>CXKdb.mdf</DependentUpon>
+    </Content>
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -141,7 +145,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="db\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

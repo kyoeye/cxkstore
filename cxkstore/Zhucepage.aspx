@@ -47,7 +47,7 @@
                     <td class="tdcss">密码
                     </td>
                     <td>
-                        <input type="text" class="inputsty"  id="password" runat="server" name="password" />
+                        <input type="password" class="inputsty"  id="password"  runat="server" name="password" />
                     </td>
                 </tr>
                 <tr>
@@ -69,7 +69,7 @@
                     <td class="tdcss">性别
                     </td>
                     <td>
-                        <asp:RadioButtonList ID="RadButton" RepeatColumns="3" runat="server">
+                        <asp:RadioButtonList ID="Radbtnl" RepeatColumns="3" runat="server">
                             <asp:ListItem runat="server"> 男</asp:ListItem>
                             <asp:ListItem runat="server">女</asp:ListItem>                
                         </asp:RadioButtonList>
@@ -80,14 +80,14 @@
                         收货地址
                     </td>
                     <td>
-                        <input  class="inputsty" type="text" />
+                        <input id="dizhi" name="dizhi"  runat="server" class="inputsty" type="text" />
                     </td>
                 </tr>
             </table>
              <br />
             <asp:ValidationSummary CssClass="tosttextcss" EnableClientScript="true" DisplayMode="BulletList" runat="server" />
             <br />
-            <asp:Button CssClass="btncss_black" Text="注册" runat="server" /><br />
+            <asp:Button CssClass="btncss_black" Text="注册" ID="ZhuCebtn" OnClick="ZhuCebtn_Click" runat="server" /><br />
             <br />
             <asp:Button CssClass="btncss_black" ID="loginbtn" OnClick="loginbtn_Click" CausesValidation="false" Text="返回登录" runat="server" />
            
