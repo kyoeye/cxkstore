@@ -40,6 +40,10 @@
     .img{
         margin:0 auto;
     }
+    .logo{
+        margin:0 auto;
+        padding:5px;
+    }
     .a{
          height:40px;
          width:70px;
@@ -63,15 +67,15 @@
     <form id="form1" runat="server">
         <div>
             <div style="background-color:#333333;color:white;padding:0px;height:40px;text-align:center">
-              
+              <div  style="float:left;height:40px;width:40px;margin:0 auto;">
+                  <asp:Image Height="25px"  CssClass="logo"  ImageUrl="~/images/icon/lanqiu.png" runat="server" />
+              </div>
                 <div style="float:right;padding:0px;margin:0 auto;text-align:center">
                     <asp:Button Text="我的"  runat="server"   class="btncss_black" />
-                    <a  class="a" runat="server">
+                      <asp:Button Text="订单"  runat="server"  class="btncss_black" />
+                      <a  class="a" runat="server">
                         <asp:Image  Height="25px" CssClass="img"  ImageUrl="~/images/icon/gouwuchekong.png"  runat="server"/>
                     </a>
-                 
-                    <asp:Button Text="订单"  runat="server"  class="btncss_black" />
-                    <asp:Button Text="购物车"  runat="server"  class="btncss_black" />
                 </div>
             </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
