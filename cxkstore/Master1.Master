@@ -8,14 +8,70 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style>
+       .btncss_black {
+    color: #ffffff;
+    border: none;
+    font-family: 'Microsoft YaHei';
+    background-color: #1c1b1b;
+    border-radius: 5px;
+      width: 70px;
+        height: 40px;
+}
+
+    .btncss_black:hover {
+        color: #fff;
+        border: none;
+        font-family: 'Microsoft YaHei';
+        background-color: #534e4e;
+        border-radius: 5px;
+        width: 70px;
+        height: 40px;
+    }
+    .btncss_black:active {
+        color: #fff;
+        border: none;
+        font-family: 'Microsoft YaHei';
+        background-color: #1c1b1b;
+        border-radius: 5px;
+        width: 70px;
+        height: 40px;
+    }
+    .img{
+        margin:0 auto;
+    }
+    .a{
+         height:40px;
+         width:70px;
+         display:inline-block;
+         margin:0 auto;
+         text-align:center;
+         line-height:35px;
+    }
+     .a:hover{
+         height:40px;
+         width:70px;
+         display:inline-block;
+         margin:0 auto;
+         opacity:0.5;
+         text-align:center;
+         line-height:35px;
+    }
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <div style="background-color:#333333;color:white;padding:5px;height:40px;">
-                <h1 style="float:left;font-size:16px; margin:0 auto">这是一个模板页</h1>
-                <div style="float:right;padding:0px;margin:0 auto;">
-                    <asp:Button Text="text" runat="server" Height="40px" />
+            <div style="background-color:#333333;color:white;padding:0px;height:40px;text-align:center">
+              
+                <div style="float:right;padding:0px;margin:0 auto;text-align:center">
+                    <asp:Button Text="我的"  runat="server"   class="btncss_black" />
+                    <a  class="a" runat="server">
+                        <asp:Image  Height="25px" CssClass="img"  ImageUrl="~/images/icon/gouwuchekong.png"  runat="server"/>
+                    </a>
+                 
+                    <asp:Button Text="订单"  runat="server"  class="btncss_black" />
+                    <asp:Button Text="购物车"  runat="server"  class="btncss_black" />
                 </div>
             </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

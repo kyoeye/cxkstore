@@ -74,6 +74,7 @@
     <Content Include="css\CXKstyle.css" />
     <Content Include="Global.asax" />
     <Content Include="GWCpage.aspx" />
+    <Content Include="images\icon\gouwuchekong.png" />
     <Content Include="images\timgQM1F6PZZ.jpg" />
     <Content Include="images\u=945315310,1576619437&amp;fm=11&amp;gp=0.jpg" />
     <Content Include="Mainpage.aspx" />

@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Master1.Master" CodeBehind="Mainpage.aspx.cs" Inherits="cxkstore.Mainpage" %>
 <asp:Content ContentPlaceHolderId="ContentPlaceHolder1" runat="server">
-<!DOCTYPE html>
+    <!DOCTYPE html>
 
 <html>
 <head >
@@ -10,7 +10,10 @@
 </head>
 <body>
         <div>
+            <div style="text-align:center;width:1300px;margin:auto">
                     <h1>啊，这是个首页这要个好大的banner</h1>
+
+            </div>
              
         </div>
 </body>
