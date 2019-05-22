@@ -76,8 +76,10 @@
     <Content Include="GWCpage.aspx" />
     <Content Include="images\icon\gouwuchekong.png" />
     <Content Include="images\icon\lanqiu.png" />
+    <Content Include="images\icon\sousuo.png" />
     <Content Include="images\timgQM1F6PZZ.jpg" />
     <Content Include="images\u=945315310,1576619437&amp;fm=11&amp;gp=0.jpg" />
+    <Content Include="images\mainpage\wp.jpg" />
     <Content Include="Mainpage.aspx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />

@@ -71,10 +71,13 @@
                   <asp:Image Height="25px"  CssClass="logo"  ImageUrl="~/images/icon/lanqiu.png" runat="server" />
               </div>
                 <div style="float:right;padding:0px;margin:0 auto;text-align:center">
+                     <a  class="a" runat="server">
+                        <asp:Image  Height="18px" CssClass="img"  ImageUrl="~/images/icon/sousuo.png"  runat="server"/>
+                    </a>
                     <asp:Button Text="我的"  runat="server"   class="btncss_black" />
                       <asp:Button Text="订单"  runat="server"  class="btncss_black" />
                       <a  class="a" runat="server">
-                        <asp:Image  Height="25px" CssClass="img"  ImageUrl="~/images/icon/gouwuchekong.png"  runat="server"/>
+                        <asp:Image  Height="18px" CssClass="img"  ImageUrl="~/images/icon/gouwuchekong.png"  runat="server"/>
                     </a>
                 </div>
             </div>

@@ -76,3 +76,63 @@
         width: auto;
         height: auto;
     }
+
+/*按钮-炫酷黑 长*/
+.btncss_black_L {
+    color: #ffffff;
+    border: none;
+    font-family: 'Microsoft YaHei';
+    background-color: #1c1b1b;
+    border-radius: 5px;
+    padding: 7px 20px 7px 20px;
+    width: 50px;
+    height: 400px;
+}
+
+    .btncss_black_L:hover {
+        color: #fff;
+        border: none;
+        font-family: 'Microsoft YaHei';
+        background-color: #534e4e;
+        border-radius: 5px;
+        padding: 7px 20px 7px 20px;
+        width: 50px;
+        height: 400px;
+    }
+
+    .btncss_black_L:active {
+        color: #fff;
+        border: none;
+        font-family: 'Microsoft YaHei';
+        background-color: #1c1b1b;
+        border-radius: 5px;
+        padding: 7px 20px 7px 20px;
+        width: 50px;
+        height: 400px;
+    }
+
+.texttitle {
+    font-family: 'Microsoft YaHei';
+    font-weight: 500;
+    font-size: 26px;
+    color: #534e4e;
+    text-wrap: normal
+}
+    .textzw{
+        font-family:'Microsoft YaHei';
+        font-weight:400;
+        font-size:16px;
+        color:#534e4e;
+        letter-spacing:2px;
+        text-wrap:normal
+    }
+
+  /*表格用的样式*/
+.grid {
+    width: 1000px
+}
+    .grid table td {
+        background: #f1f1f1;
+        color: #000;
+        line-height: 50px
+    } 
