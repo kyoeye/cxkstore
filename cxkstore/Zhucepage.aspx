@@ -8,9 +8,7 @@
     <title></title>
     <link href="../css/CXKstyle.css" rel="stylesheet" type="text/css" />
     <script>
-        $("test").click(function myfunction() {
-            $username.
-        })
+   
     </script>
    <style>
        .inputsty{
@@ -29,7 +27,7 @@
 </head>
 <body runat="server" style="background-color:#333333;  position:relative">
     <div class="divJZ" runat="server">
-        <h1 name="test" id="test" runat="server"  onclick="test">注册用户</h1>
+        <asp:label   ID="test" CssClass="texttitle" runat="server"   >注册用户</asp:label>
         <!--啊-->
         <form id="ZCform" style="margin-top:50px" runat="server">
             <table style="width:500px;height:400px;text-align:left;margin:auto">
@@ -59,7 +57,7 @@
                     <td class="tdcss">确认密码
                     </td>
                     <td>
-                        <input type="text" class="inputsty" id="passwordrfv" runat="server" name="passwordrfv" />
+                        <input type="password" class="inputsty" id="passwordrfv" runat="server" name="passwordrfv" />
 
                     </td>
                 </tr>

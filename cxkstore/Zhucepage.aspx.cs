@@ -28,15 +28,29 @@ namespace cxkstore
             Name = name.Value;
             Password = password.Value;
             DiZhi = dizhi.Value;
-            Sex = Radbtnl.SelectedItem.Value;//获取一个数字，数据库也是存数字
+            try
+            {
+                Sex = Radbtnl.SelectedIndex.ToString();//获取一个数字，数据库也是存数字
+            }
+            catch
+            {
+                Sex = "0";
+            }
             PhoneNum = phonenum.Value;
 
             using(SqlConnection sc = new SqlConnection(cxkdb))
             {
                 SqlCommand sqlc = sc.CreateCommand();
-                sqlc.CommandText = "insert into Userdb(username,sex,password,shouhuodizhi,phonenum) values(@)";
-               // sqlc.Parameters.AddWithValue();
-
+                sc.Open();
+                sqlc.CommandText = string.Format("insert into Userdb(username,sex,password,shouhuodizhi,phonenum) values(N'{0}',@sex,@password,N'{1}',@phonenum)",Name,DiZhi);
+                sqlc.Parameters.AddWithValue("@sex", Sex);
+                sqlc.Parameters.AddWithValue("@password", Password);//正常来说密码应该加密存储
+                sqlc.Parameters.AddWithValue("@phonenum", PhoneNum);
+                int m = sqlc.ExecuteNonQuery();
+                if (m == 0)
+                   test.Text = "注册失败！请重新注册。";
+                else
+                    test.Text = "注册成功！";
             }
 
            
