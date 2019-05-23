@@ -34,7 +34,8 @@ namespace cxkstore
             using(SqlConnection sc = new SqlConnection(cxkdb))
             {
                 SqlCommand sqlc = sc.CreateCommand();
-                sqlc.CommandText = "insert into Userdb(username,sex,password,shouhuodizhi,phonenum)";
+                sqlc.CommandText = "insert into Userdb(username,sex,password,shouhuodizhi,phonenum) values(@)";
+               // sqlc.Parameters.AddWithValue();
 
             }
 

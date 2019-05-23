@@ -88,6 +88,7 @@
     <Content Include="Mainpage.aspx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />
+    <Content Include="XiangQingpage.aspx" />
     <Content Include="Zhucepage.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +132,13 @@
     </Compile>
     <Compile Include="UserLogin.aspx.designer.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XiangQingpage.aspx.cs">
+      <DependentUpon>XiangQingpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XiangQingpage.aspx.designer.cs">
+      <DependentUpon>XiangQingpage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Zhucepage.aspx.cs">
       <DependentUpon>Zhucepage.aspx</DependentUpon>
