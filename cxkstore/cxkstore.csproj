@@ -78,6 +78,7 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\CXKstyle.css" />
     <Content Include="Global.asax" />
+    <Content Include="GongyinS.aspx" />
     <Content Include="GWCpage.aspx" />
     <Content Include="images\icon\gouwuchekong.png" />
     <Content Include="images\icon\lanqiu.png" />
@@ -103,6 +104,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GongyinS.aspx.cs">
+      <DependentUpon>GongyinS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GongyinS.aspx.designer.cs">
+      <DependentUpon>GongyinS.aspx</DependentUpon>
     </Compile>
     <Compile Include="GWCpage.aspx.cs">
       <DependentUpon>GWCpage.aspx</DependentUpon>

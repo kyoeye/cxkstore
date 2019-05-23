@@ -10,6 +10,6 @@
 namespace cxkstore {
     
     
-    public partial class GWCpage {
+    public partial class GongyinS {
     }
 }
