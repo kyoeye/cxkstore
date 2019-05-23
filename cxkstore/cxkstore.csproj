@@ -92,6 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cs\UserContext.cs" />
+    <Compile Include="CXKdbml.cs">
+      <DependentUpon>CXKdbml.dbml</DependentUpon>
+    </Compile>
     <Compile Include="CXKdbml.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

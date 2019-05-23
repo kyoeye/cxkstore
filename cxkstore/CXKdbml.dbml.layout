@@ -2,11 +2,83 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CXKdbml">
   <DataContextMoniker Name="/CXKdbmlDataContext" />
   <nestedChildShapes>
-    <classShape Id="daec4089-034f-4f84-a287-b448270e3a4a" absoluteBounds="2.375, 1.25, 2, 1.9068933105468751">
+    <classShape Id="daec4089-034f-4f84-a287-b448270e3a4a" absoluteBounds="3.125, 1.25, 2, 1.9068933105468751">
       <DataClassMoniker Name="/CXKdbmlDataContext/Userdb" />
       <nestedChildShapes>
-        <elementListCompartment Id="d54be06e-a256-47bb-9f1b-d40cd0d413ea" absoluteBounds="2.3899999999999997, 1.71, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d54be06e-a256-47bb-9f1b-d40cd0d413ea" absoluteBounds="3.1399999999999997, 1.71, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="e77db340-1449-41fd-8f44-bf43ffd0f4f3" absoluteBounds="5.75, 3.875, 2, 1.9068933105468751">
+      <DataClassMoniker Name="/CXKdbmlDataContext/DDxinxi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d906e7d8-f2f8-424c-a804-2cdbb072ab8e" absoluteBounds="5.765, 4.335, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.125 : 3.15689331054688); (4.125 : 4.82844665527344); (5.75 : 4.82844665527344)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CXKdbmlDataContext/Userdb/Userdb_DDxinxi" />
+      <nodes>
+        <classShapeMoniker Id="daec4089-034f-4f84-a287-b448270e3a4a" />
+        <classShapeMoniker Id="e77db340-1449-41fd-8f44-bf43ffd0f4f3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0ce2e925-85e6-4cc4-b3cf-d9b6bb7a1e59" absoluteBounds="7, 1.875, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/CXKdbmlDataContext/GWCtable" />
+      <nestedChildShapes>
+        <elementListCompartment Id="43e967a3-8ac1-4c9e-b735-d0b411da575f" absoluteBounds="7.015, 2.335, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.125 : 2.51594665527344); (7 : 2.51594665527344)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CXKdbmlDataContext/Userdb/Userdb_GWCtable" />
+      <nodes>
+        <classShapeMoniker Id="daec4089-034f-4f84-a287-b448270e3a4a" />
+        <classShapeMoniker Id="0ce2e925-85e6-4cc4-b3cf-d9b6bb7a1e59" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="dfa030ba-357c-47c8-ac5f-66c6317bfd2b" absoluteBounds="0.5, 4, 2, 1.5373050944010416">
+      <DataClassMoniker Name="/CXKdbmlDataContext/GYSxinxi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c169ae18-31fb-4eba-9980-2c911676d3ae" absoluteBounds="0.51500000000000012, 4.46, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f81e1e36-a82b-41da-8e17-217ebb646390" absoluteBounds="2.875, 6.125, 2, 1.3525109863281251">
+      <DataClassMoniker Name="/CXKdbmlDataContext/Phonedb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9405f8dc-6e44-4863-b00c-cf2834c61a8f" absoluteBounds="2.89, 6.585, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8c0ab7fd-cc00-4191-99b6-0e8c57ec2e4a" absoluteBounds="8.625, 4.75, 2, 2.2764815266927085">
+      <DataClassMoniker Name="/CXKdbmlDataContext/Phonexinxi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e5e0e9f-69a4-444d-84b1-71edc2e3a683" absoluteBounds="8.64, 5.21, 1.9700000000000002, 1.7164815266927085" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.625 : 5.26594665527344); (7.75 : 5.26594665527344)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CXKdbmlDataContext/Phonexinxi/Phonexinxi_DDxinxi" />
+      <nodes>
+        <classShapeMoniker Id="8c0ab7fd-cc00-4191-99b6-0e8c57ec2e4a" />
+        <classShapeMoniker Id="e77db340-1449-41fd-8f44-bf43ffd0f4f3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.8125 : 4.75); (8.8125 : 3.22751098632813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CXKdbmlDataContext/Phonexinxi/Phonexinxi_GWCtable" />
+      <nodes>
+        <classShapeMoniker Id="8c0ab7fd-cc00-4191-99b6-0e8c57ec2e4a" />
+        <classShapeMoniker Id="0ce2e925-85e6-4cc4-b3cf-d9b6bb7a1e59" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.875 : 6.57574076334635); (8.625 : 6.57574076334635)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CXKdbmlDataContext/Phonedb/Phonedb_Phonexinxi" />
+      <nodes>
+        <classShapeMoniker Id="f81e1e36-a82b-41da-8e17-217ebb646390" />
+        <classShapeMoniker Id="8c0ab7fd-cc00-4191-99b6-0e8c57ec2e4a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5 : 5.53730509440104); (1.5 : 5.95344665527344); (8.625 : 5.95344665527344)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CXKdbmlDataContext/GYSxinxi/GYSxinxi_Phonexinxi" />
+      <nodes>
+        <classShapeMoniker Id="dfa030ba-357c-47c8-ac5f-66c6317bfd2b" />
+        <classShapeMoniker Id="8c0ab7fd-cc00-4191-99b6-0e8c57ec2e4a" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

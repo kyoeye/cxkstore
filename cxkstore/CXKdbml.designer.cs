@@ -33,6 +33,21 @@ namespace cxkstore
     partial void InsertUserdb(Userdb instance);
     partial void UpdateUserdb(Userdb instance);
     partial void DeleteUserdb(Userdb instance);
+    partial void InsertDDxinxi(DDxinxi instance);
+    partial void UpdateDDxinxi(DDxinxi instance);
+    partial void DeleteDDxinxi(DDxinxi instance);
+    partial void InsertGWCtable(GWCtable instance);
+    partial void UpdateGWCtable(GWCtable instance);
+    partial void DeleteGWCtable(GWCtable instance);
+    partial void InsertGYSxinxi(GYSxinxi instance);
+    partial void UpdateGYSxinxi(GYSxinxi instance);
+    partial void DeleteGYSxinxi(GYSxinxi instance);
+    partial void InsertPhonedb(Phonedb instance);
+    partial void UpdatePhonedb(Phonedb instance);
+    partial void DeletePhonedb(Phonedb instance);
+    partial void InsertPhonexinxi(Phonexinxi instance);
+    partial void UpdatePhonexinxi(Phonexinxi instance);
+    partial void DeletePhonexinxi(Phonexinxi instance);
     #endregion
 		
 		public CXKdbmlDataContext() : 
@@ -72,6 +87,46 @@ namespace cxkstore
 				return this.GetTable<Userdb>();
 			}
 		}
+		
+		public System.Data.Linq.Table<DDxinxi> DDxinxi
+		{
+			get
+			{
+				return this.GetTable<DDxinxi>();
+			}
+		}
+		
+		public System.Data.Linq.Table<GWCtable> GWCtable
+		{
+			get
+			{
+				return this.GetTable<GWCtable>();
+			}
+		}
+		
+		public System.Data.Linq.Table<GYSxinxi> GYSxinxi
+		{
+			get
+			{
+				return this.GetTable<GYSxinxi>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Phonedb> Phonedb
+		{
+			get
+			{
+				return this.GetTable<Phonedb>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Phonexinxi> Phonexinxi
+		{
+			get
+			{
+				return this.GetTable<Phonexinxi>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Userdb")]
@@ -91,6 +146,10 @@ namespace cxkstore
 		private string _shouhuodizhi;
 		
 		private string _phonenum;
+		
+		private EntitySet<DDxinxi> _DDxinxi;
+		
+		private EntitySet<GWCtable> _GWCtable;
 		
     #region 可扩展性方法定义
     partial void OnLoaded();
@@ -112,6 +171,8 @@ namespace cxkstore
 		
 		public Userdb()
 		{
+			this._DDxinxi = new EntitySet<DDxinxi>(new Action<DDxinxi>(this.attach_DDxinxi), new Action<DDxinxi>(this.detach_DDxinxi));
+			this._GWCtable = new EntitySet<GWCtable>(new Action<GWCtable>(this.attach_GWCtable), new Action<GWCtable>(this.detach_GWCtable));
 			OnCreated();
 		}
 		
@@ -235,6 +296,32 @@ namespace cxkstore
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Userdb_DDxinxi", Storage="_DDxinxi", ThisKey="userid", OtherKey="userid")]
+		public EntitySet<DDxinxi> DDxinxi
+		{
+			get
+			{
+				return this._DDxinxi;
+			}
+			set
+			{
+				this._DDxinxi.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Userdb_GWCtable", Storage="_GWCtable", ThisKey="userid", OtherKey="userid")]
+		public EntitySet<GWCtable> GWCtable
+		{
+			get
+			{
+				return this._GWCtable;
+			}
+			set
+			{
+				this._GWCtable.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -253,6 +340,1154 @@ namespace cxkstore
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_DDxinxi(DDxinxi entity)
+		{
+			this.SendPropertyChanging();
+			entity.Userdb = this;
+		}
+		
+		private void detach_DDxinxi(DDxinxi entity)
+		{
+			this.SendPropertyChanging();
+			entity.Userdb = null;
+		}
+		
+		private void attach_GWCtable(GWCtable entity)
+		{
+			this.SendPropertyChanging();
+			entity.Userdb = this;
+		}
+		
+		private void detach_GWCtable(GWCtable entity)
+		{
+			this.SendPropertyChanging();
+			entity.Userdb = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DDxinxi")]
+	public partial class DDxinxi : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _ddid;
+		
+		private string _phonenum;
+		
+		private string _userid;
+		
+		private System.Nullable<System.DateTime> _ddtime;
+		
+		private string _ddshuliang;
+		
+		private System.Nullable<decimal> _ddzje;
+		
+		private EntityRef<Userdb> _Userdb;
+		
+		private EntityRef<Phonexinxi> _Phonexinxi;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnddidChanging(string value);
+    partial void OnddidChanged();
+    partial void OnphonenumChanging(string value);
+    partial void OnphonenumChanged();
+    partial void OnuseridChanging(string value);
+    partial void OnuseridChanged();
+    partial void OnddtimeChanging(System.Nullable<System.DateTime> value);
+    partial void OnddtimeChanged();
+    partial void OnddshuliangChanging(string value);
+    partial void OnddshuliangChanged();
+    partial void OnddzjeChanging(System.Nullable<decimal> value);
+    partial void OnddzjeChanged();
+    #endregion
+		
+		public DDxinxi()
+		{
+			this._Userdb = default(EntityRef<Userdb>);
+			this._Phonexinxi = default(EntityRef<Phonexinxi>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ddid", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string ddid
+		{
+			get
+			{
+				return this._ddid;
+			}
+			set
+			{
+				if ((this._ddid != value))
+				{
+					this.OnddidChanging(value);
+					this.SendPropertyChanging();
+					this._ddid = value;
+					this.SendPropertyChanged("ddid");
+					this.OnddidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonenum", DbType="VarChar(20)")]
+		public string phonenum
+		{
+			get
+			{
+				return this._phonenum;
+			}
+			set
+			{
+				if ((this._phonenum != value))
+				{
+					if (this._Phonexinxi.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnphonenumChanging(value);
+					this.SendPropertyChanging();
+					this._phonenum = value;
+					this.SendPropertyChanged("phonenum");
+					this.OnphonenumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userid", DbType="VarChar(20)")]
+		public string userid
+		{
+			get
+			{
+				return this._userid;
+			}
+			set
+			{
+				if ((this._userid != value))
+				{
+					if (this._Userdb.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnuseridChanging(value);
+					this.SendPropertyChanging();
+					this._userid = value;
+					this.SendPropertyChanged("userid");
+					this.OnuseridChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ddtime", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ddtime
+		{
+			get
+			{
+				return this._ddtime;
+			}
+			set
+			{
+				if ((this._ddtime != value))
+				{
+					this.OnddtimeChanging(value);
+					this.SendPropertyChanging();
+					this._ddtime = value;
+					this.SendPropertyChanged("ddtime");
+					this.OnddtimeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ddshuliang", DbType="NChar(10)")]
+		public string ddshuliang
+		{
+			get
+			{
+				return this._ddshuliang;
+			}
+			set
+			{
+				if ((this._ddshuliang != value))
+				{
+					this.OnddshuliangChanging(value);
+					this.SendPropertyChanging();
+					this._ddshuliang = value;
+					this.SendPropertyChanged("ddshuliang");
+					this.OnddshuliangChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ddzje", DbType="Decimal(10,2)")]
+		public System.Nullable<decimal> ddzje
+		{
+			get
+			{
+				return this._ddzje;
+			}
+			set
+			{
+				if ((this._ddzje != value))
+				{
+					this.OnddzjeChanging(value);
+					this.SendPropertyChanging();
+					this._ddzje = value;
+					this.SendPropertyChanged("ddzje");
+					this.OnddzjeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Userdb_DDxinxi", Storage="_Userdb", ThisKey="userid", OtherKey="userid", IsForeignKey=true)]
+		public Userdb Userdb
+		{
+			get
+			{
+				return this._Userdb.Entity;
+			}
+			set
+			{
+				Userdb previousValue = this._Userdb.Entity;
+				if (((previousValue != value) 
+							|| (this._Userdb.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Userdb.Entity = null;
+						previousValue.DDxinxi.Remove(this);
+					}
+					this._Userdb.Entity = value;
+					if ((value != null))
+					{
+						value.DDxinxi.Add(this);
+						this._userid = value.userid;
+					}
+					else
+					{
+						this._userid = default(string);
+					}
+					this.SendPropertyChanged("Userdb");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Phonexinxi_DDxinxi", Storage="_Phonexinxi", ThisKey="phonenum", OtherKey="phonenum", IsForeignKey=true)]
+		public Phonexinxi Phonexinxi
+		{
+			get
+			{
+				return this._Phonexinxi.Entity;
+			}
+			set
+			{
+				Phonexinxi previousValue = this._Phonexinxi.Entity;
+				if (((previousValue != value) 
+							|| (this._Phonexinxi.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Phonexinxi.Entity = null;
+						previousValue.DDxinxi.Remove(this);
+					}
+					this._Phonexinxi.Entity = value;
+					if ((value != null))
+					{
+						value.DDxinxi.Add(this);
+						this._phonenum = value.phonenum;
+					}
+					else
+					{
+						this._phonenum = default(string);
+					}
+					this.SendPropertyChanged("Phonexinxi");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GWCtable")]
+	public partial class GWCtable : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _gwcid;
+		
+		private string _userid;
+		
+		private string _phonenum;
+		
+		private EntityRef<Userdb> _Userdb;
+		
+		private EntityRef<Phonexinxi> _Phonexinxi;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OngwcidChanging(string value);
+    partial void OngwcidChanged();
+    partial void OnuseridChanging(string value);
+    partial void OnuseridChanged();
+    partial void OnphonenumChanging(string value);
+    partial void OnphonenumChanged();
+    #endregion
+		
+		public GWCtable()
+		{
+			this._Userdb = default(EntityRef<Userdb>);
+			this._Phonexinxi = default(EntityRef<Phonexinxi>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gwcid", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string gwcid
+		{
+			get
+			{
+				return this._gwcid;
+			}
+			set
+			{
+				if ((this._gwcid != value))
+				{
+					this.OngwcidChanging(value);
+					this.SendPropertyChanging();
+					this._gwcid = value;
+					this.SendPropertyChanged("gwcid");
+					this.OngwcidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userid", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string userid
+		{
+			get
+			{
+				return this._userid;
+			}
+			set
+			{
+				if ((this._userid != value))
+				{
+					if (this._Userdb.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnuseridChanging(value);
+					this.SendPropertyChanging();
+					this._userid = value;
+					this.SendPropertyChanged("userid");
+					this.OnuseridChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonenum", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string phonenum
+		{
+			get
+			{
+				return this._phonenum;
+			}
+			set
+			{
+				if ((this._phonenum != value))
+				{
+					if (this._Phonexinxi.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnphonenumChanging(value);
+					this.SendPropertyChanging();
+					this._phonenum = value;
+					this.SendPropertyChanged("phonenum");
+					this.OnphonenumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Userdb_GWCtable", Storage="_Userdb", ThisKey="userid", OtherKey="userid", IsForeignKey=true)]
+		public Userdb Userdb
+		{
+			get
+			{
+				return this._Userdb.Entity;
+			}
+			set
+			{
+				Userdb previousValue = this._Userdb.Entity;
+				if (((previousValue != value) 
+							|| (this._Userdb.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Userdb.Entity = null;
+						previousValue.GWCtable.Remove(this);
+					}
+					this._Userdb.Entity = value;
+					if ((value != null))
+					{
+						value.GWCtable.Add(this);
+						this._userid = value.userid;
+					}
+					else
+					{
+						this._userid = default(string);
+					}
+					this.SendPropertyChanged("Userdb");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Phonexinxi_GWCtable", Storage="_Phonexinxi", ThisKey="phonenum", OtherKey="phonenum", IsForeignKey=true)]
+		public Phonexinxi Phonexinxi
+		{
+			get
+			{
+				return this._Phonexinxi.Entity;
+			}
+			set
+			{
+				Phonexinxi previousValue = this._Phonexinxi.Entity;
+				if (((previousValue != value) 
+							|| (this._Phonexinxi.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Phonexinxi.Entity = null;
+						previousValue.GWCtable.Remove(this);
+					}
+					this._Phonexinxi.Entity = value;
+					if ((value != null))
+					{
+						value.GWCtable.Add(this);
+						this._phonenum = value.phonenum;
+					}
+					else
+					{
+						this._phonenum = default(string);
+					}
+					this.SendPropertyChanged("Phonexinxi");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GYSxinxi")]
+	public partial class GYSxinxi : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _gysid;
+		
+		private string _gysname;
+		
+		private string _gysaddress;
+		
+		private string _gysphonenum;
+		
+		private EntitySet<Phonexinxi> _Phonexinxi;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OngysidChanging(string value);
+    partial void OngysidChanged();
+    partial void OngysnameChanging(string value);
+    partial void OngysnameChanged();
+    partial void OngysaddressChanging(string value);
+    partial void OngysaddressChanged();
+    partial void OngysphonenumChanging(string value);
+    partial void OngysphonenumChanged();
+    #endregion
+		
+		public GYSxinxi()
+		{
+			this._Phonexinxi = new EntitySet<Phonexinxi>(new Action<Phonexinxi>(this.attach_Phonexinxi), new Action<Phonexinxi>(this.detach_Phonexinxi));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gysid", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string gysid
+		{
+			get
+			{
+				return this._gysid;
+			}
+			set
+			{
+				if ((this._gysid != value))
+				{
+					this.OngysidChanging(value);
+					this.SendPropertyChanging();
+					this._gysid = value;
+					this.SendPropertyChanged("gysid");
+					this.OngysidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gysname", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string gysname
+		{
+			get
+			{
+				return this._gysname;
+			}
+			set
+			{
+				if ((this._gysname != value))
+				{
+					this.OngysnameChanging(value);
+					this.SendPropertyChanging();
+					this._gysname = value;
+					this.SendPropertyChanged("gysname");
+					this.OngysnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gysaddress", DbType="VarChar(40)")]
+		public string gysaddress
+		{
+			get
+			{
+				return this._gysaddress;
+			}
+			set
+			{
+				if ((this._gysaddress != value))
+				{
+					this.OngysaddressChanging(value);
+					this.SendPropertyChanging();
+					this._gysaddress = value;
+					this.SendPropertyChanged("gysaddress");
+					this.OngysaddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gysphonenum", DbType="VarChar(20)")]
+		public string gysphonenum
+		{
+			get
+			{
+				return this._gysphonenum;
+			}
+			set
+			{
+				if ((this._gysphonenum != value))
+				{
+					this.OngysphonenumChanging(value);
+					this.SendPropertyChanging();
+					this._gysphonenum = value;
+					this.SendPropertyChanged("gysphonenum");
+					this.OngysphonenumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="GYSxinxi_Phonexinxi", Storage="_Phonexinxi", ThisKey="gysid", OtherKey="gysid")]
+		public EntitySet<Phonexinxi> Phonexinxi
+		{
+			get
+			{
+				return this._Phonexinxi;
+			}
+			set
+			{
+				this._Phonexinxi.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Phonexinxi(Phonexinxi entity)
+		{
+			this.SendPropertyChanging();
+			entity.GYSxinxi = this;
+		}
+		
+		private void detach_Phonexinxi(Phonexinxi entity)
+		{
+			this.SendPropertyChanging();
+			entity.GYSxinxi = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Phonedb")]
+	public partial class Phonedb : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _phoneId;
+		
+		private string _phonebrand;
+		
+		private string _phonetext;
+		
+		private EntitySet<Phonexinxi> _Phonexinxi;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnphoneIdChanging(string value);
+    partial void OnphoneIdChanged();
+    partial void OnphonebrandChanging(string value);
+    partial void OnphonebrandChanged();
+    partial void OnphonetextChanging(string value);
+    partial void OnphonetextChanged();
+    #endregion
+		
+		public Phonedb()
+		{
+			this._Phonexinxi = new EntitySet<Phonexinxi>(new Action<Phonexinxi>(this.attach_Phonexinxi), new Action<Phonexinxi>(this.detach_Phonexinxi));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phoneId", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string phoneId
+		{
+			get
+			{
+				return this._phoneId;
+			}
+			set
+			{
+				if ((this._phoneId != value))
+				{
+					this.OnphoneIdChanging(value);
+					this.SendPropertyChanging();
+					this._phoneId = value;
+					this.SendPropertyChanged("phoneId");
+					this.OnphoneIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonebrand", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string phonebrand
+		{
+			get
+			{
+				return this._phonebrand;
+			}
+			set
+			{
+				if ((this._phonebrand != value))
+				{
+					this.OnphonebrandChanging(value);
+					this.SendPropertyChanging();
+					this._phonebrand = value;
+					this.SendPropertyChanged("phonebrand");
+					this.OnphonebrandChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonetext", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string phonetext
+		{
+			get
+			{
+				return this._phonetext;
+			}
+			set
+			{
+				if ((this._phonetext != value))
+				{
+					this.OnphonetextChanging(value);
+					this.SendPropertyChanging();
+					this._phonetext = value;
+					this.SendPropertyChanged("phonetext");
+					this.OnphonetextChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Phonedb_Phonexinxi", Storage="_Phonexinxi", ThisKey="phoneId", OtherKey="phoneid")]
+		public EntitySet<Phonexinxi> Phonexinxi
+		{
+			get
+			{
+				return this._Phonexinxi;
+			}
+			set
+			{
+				this._Phonexinxi.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Phonexinxi(Phonexinxi entity)
+		{
+			this.SendPropertyChanging();
+			entity.Phonedb = this;
+		}
+		
+		private void detach_Phonexinxi(Phonexinxi entity)
+		{
+			this.SendPropertyChanging();
+			entity.Phonedb = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Phonexinxi")]
+	public partial class Phonexinxi : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _phonenum;
+		
+		private string _phoneid;
+		
+		private string _gysid;
+		
+		private string _phonename;
+		
+		private decimal _phoneprice;
+		
+		private string _pjieshao;
+		
+		private decimal _pchengben;
+		
+		private System.Nullable<int> _pkucun;
+		
+		private EntitySet<DDxinxi> _DDxinxi;
+		
+		private EntitySet<GWCtable> _GWCtable;
+		
+		private EntityRef<Phonedb> _Phonedb;
+		
+		private EntityRef<GYSxinxi> _GYSxinxi;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnphonenumChanging(string value);
+    partial void OnphonenumChanged();
+    partial void OnphoneidChanging(string value);
+    partial void OnphoneidChanged();
+    partial void OngysidChanging(string value);
+    partial void OngysidChanged();
+    partial void OnphonenameChanging(string value);
+    partial void OnphonenameChanged();
+    partial void OnphonepriceChanging(decimal value);
+    partial void OnphonepriceChanged();
+    partial void OnpjieshaoChanging(string value);
+    partial void OnpjieshaoChanged();
+    partial void OnpchengbenChanging(decimal value);
+    partial void OnpchengbenChanged();
+    partial void OnpkucunChanging(System.Nullable<int> value);
+    partial void OnpkucunChanged();
+    #endregion
+		
+		public Phonexinxi()
+		{
+			this._DDxinxi = new EntitySet<DDxinxi>(new Action<DDxinxi>(this.attach_DDxinxi), new Action<DDxinxi>(this.detach_DDxinxi));
+			this._GWCtable = new EntitySet<GWCtable>(new Action<GWCtable>(this.attach_GWCtable), new Action<GWCtable>(this.detach_GWCtable));
+			this._Phonedb = default(EntityRef<Phonedb>);
+			this._GYSxinxi = default(EntityRef<GYSxinxi>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonenum", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string phonenum
+		{
+			get
+			{
+				return this._phonenum;
+			}
+			set
+			{
+				if ((this._phonenum != value))
+				{
+					this.OnphonenumChanging(value);
+					this.SendPropertyChanging();
+					this._phonenum = value;
+					this.SendPropertyChanged("phonenum");
+					this.OnphonenumChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phoneid", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string phoneid
+		{
+			get
+			{
+				return this._phoneid;
+			}
+			set
+			{
+				if ((this._phoneid != value))
+				{
+					if (this._Phonedb.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnphoneidChanging(value);
+					this.SendPropertyChanging();
+					this._phoneid = value;
+					this.SendPropertyChanged("phoneid");
+					this.OnphoneidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gysid", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string gysid
+		{
+			get
+			{
+				return this._gysid;
+			}
+			set
+			{
+				if ((this._gysid != value))
+				{
+					if (this._GYSxinxi.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OngysidChanging(value);
+					this.SendPropertyChanging();
+					this._gysid = value;
+					this.SendPropertyChanged("gysid");
+					this.OngysidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonename", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string phonename
+		{
+			get
+			{
+				return this._phonename;
+			}
+			set
+			{
+				if ((this._phonename != value))
+				{
+					this.OnphonenameChanging(value);
+					this.SendPropertyChanging();
+					this._phonename = value;
+					this.SendPropertyChanged("phonename");
+					this.OnphonenameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phoneprice", DbType="Decimal(10,2) NOT NULL")]
+		public decimal phoneprice
+		{
+			get
+			{
+				return this._phoneprice;
+			}
+			set
+			{
+				if ((this._phoneprice != value))
+				{
+					this.OnphonepriceChanging(value);
+					this.SendPropertyChanging();
+					this._phoneprice = value;
+					this.SendPropertyChanged("phoneprice");
+					this.OnphonepriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pjieshao", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string pjieshao
+		{
+			get
+			{
+				return this._pjieshao;
+			}
+			set
+			{
+				if ((this._pjieshao != value))
+				{
+					this.OnpjieshaoChanging(value);
+					this.SendPropertyChanging();
+					this._pjieshao = value;
+					this.SendPropertyChanged("pjieshao");
+					this.OnpjieshaoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pchengben", DbType="Decimal(10,2) NOT NULL")]
+		public decimal pchengben
+		{
+			get
+			{
+				return this._pchengben;
+			}
+			set
+			{
+				if ((this._pchengben != value))
+				{
+					this.OnpchengbenChanging(value);
+					this.SendPropertyChanging();
+					this._pchengben = value;
+					this.SendPropertyChanged("pchengben");
+					this.OnpchengbenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pkucun", DbType="Int")]
+		public System.Nullable<int> pkucun
+		{
+			get
+			{
+				return this._pkucun;
+			}
+			set
+			{
+				if ((this._pkucun != value))
+				{
+					this.OnpkucunChanging(value);
+					this.SendPropertyChanging();
+					this._pkucun = value;
+					this.SendPropertyChanged("pkucun");
+					this.OnpkucunChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Phonexinxi_DDxinxi", Storage="_DDxinxi", ThisKey="phonenum", OtherKey="phonenum")]
+		public EntitySet<DDxinxi> DDxinxi
+		{
+			get
+			{
+				return this._DDxinxi;
+			}
+			set
+			{
+				this._DDxinxi.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Phonexinxi_GWCtable", Storage="_GWCtable", ThisKey="phonenum", OtherKey="phonenum")]
+		public EntitySet<GWCtable> GWCtable
+		{
+			get
+			{
+				return this._GWCtable;
+			}
+			set
+			{
+				this._GWCtable.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Phonedb_Phonexinxi", Storage="_Phonedb", ThisKey="phoneid", OtherKey="phoneId", IsForeignKey=true)]
+		public Phonedb Phonedb
+		{
+			get
+			{
+				return this._Phonedb.Entity;
+			}
+			set
+			{
+				Phonedb previousValue = this._Phonedb.Entity;
+				if (((previousValue != value) 
+							|| (this._Phonedb.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Phonedb.Entity = null;
+						previousValue.Phonexinxi.Remove(this);
+					}
+					this._Phonedb.Entity = value;
+					if ((value != null))
+					{
+						value.Phonexinxi.Add(this);
+						this._phoneid = value.phoneId;
+					}
+					else
+					{
+						this._phoneid = default(string);
+					}
+					this.SendPropertyChanged("Phonedb");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="GYSxinxi_Phonexinxi", Storage="_GYSxinxi", ThisKey="gysid", OtherKey="gysid", IsForeignKey=true)]
+		public GYSxinxi GYSxinxi
+		{
+			get
+			{
+				return this._GYSxinxi.Entity;
+			}
+			set
+			{
+				GYSxinxi previousValue = this._GYSxinxi.Entity;
+				if (((previousValue != value) 
+							|| (this._GYSxinxi.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._GYSxinxi.Entity = null;
+						previousValue.Phonexinxi.Remove(this);
+					}
+					this._GYSxinxi.Entity = value;
+					if ((value != null))
+					{
+						value.Phonexinxi.Add(this);
+						this._gysid = value.gysid;
+					}
+					else
+					{
+						this._gysid = default(string);
+					}
+					this.SendPropertyChanged("GYSxinxi");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_DDxinxi(DDxinxi entity)
+		{
+			this.SendPropertyChanging();
+			entity.Phonexinxi = this;
+		}
+		
+		private void detach_DDxinxi(DDxinxi entity)
+		{
+			this.SendPropertyChanging();
+			entity.Phonexinxi = null;
+		}
+		
+		private void attach_GWCtable(GWCtable entity)
+		{
+			this.SendPropertyChanging();
+			entity.Phonexinxi = this;
+		}
+		
+		private void detach_GWCtable(GWCtable entity)
+		{
+			this.SendPropertyChanging();
+			entity.Phonexinxi = null;
 		}
 	}
 }

@@ -8,6 +8,62 @@
       <Column Name="password" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
       <Column Name="shouhuodizhi" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="phonenum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Userdb_DDxinxi" Member="DDxinxi" ThisKey="userid" OtherKey="userid" Type="DDxinxi" />
+      <Association Name="Userdb_GWCtable" Member="GWCtable" ThisKey="userid" OtherKey="userid" Type="GWCtable" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DDxinxi" Member="DDxinxi">
+    <Type Name="DDxinxi">
+      <Column Name="ddid" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="phonenum" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="userid" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ddtime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ddshuliang" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="ddzje" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Association Name="Userdb_DDxinxi" Member="Userdb" ThisKey="userid" OtherKey="userid" Type="Userdb" IsForeignKey="true" />
+      <Association Name="Phonexinxi_DDxinxi" Member="Phonexinxi" ThisKey="phonenum" OtherKey="phonenum" Type="Phonexinxi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GWCtable" Member="GWCtable">
+    <Type Name="GWCtable">
+      <Column Name="gwcid" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="userid" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="phonenum" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Userdb_GWCtable" Member="Userdb" ThisKey="userid" OtherKey="userid" Type="Userdb" IsForeignKey="true" />
+      <Association Name="Phonexinxi_GWCtable" Member="Phonexinxi" ThisKey="phonenum" OtherKey="phonenum" Type="Phonexinxi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GYSxinxi" Member="GYSxinxi">
+    <Type Name="GYSxinxi">
+      <Column Name="gysid" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="gysname" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="gysaddress" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="gysphonenum" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="GYSxinxi_Phonexinxi" Member="Phonexinxi" ThisKey="gysid" OtherKey="gysid" Type="Phonexinxi" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Phonedb" Member="Phonedb">
+    <Type Name="Phonedb">
+      <Column Name="phoneId" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="phonebrand" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="phonetext" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Phonedb_Phonexinxi" Member="Phonexinxi" ThisKey="phoneId" OtherKey="phoneid" Type="Phonexinxi" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Phonexinxi" Member="Phonexinxi">
+    <Type Name="Phonexinxi">
+      <Column Name="phonenum" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="phoneid" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="gysid" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="phonename" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="phoneprice" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="pjieshao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="pchengben" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="pkucun" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Phonexinxi_DDxinxi" Member="DDxinxi" ThisKey="phonenum" OtherKey="phonenum" Type="DDxinxi" />
+      <Association Name="Phonexinxi_GWCtable" Member="GWCtable" ThisKey="phonenum" OtherKey="phonenum" Type="GWCtable" />
+      <Association Name="Phonedb_Phonexinxi" Member="Phonedb" ThisKey="phoneid" OtherKey="phoneId" Type="Phonedb" IsForeignKey="true" />
+      <Association Name="GYSxinxi_Phonexinxi" Member="GYSxinxi" ThisKey="gysid" OtherKey="gysid" Type="GYSxinxi" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
