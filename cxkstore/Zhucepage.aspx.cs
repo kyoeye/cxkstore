@@ -27,6 +27,11 @@ namespace cxkstore
             DiZhi = dizhi.Value;
             Sex = Radbtnl.SelectedItem.Value;//获取一个数字，数据库也是存数字
             PhoneNum = phonenum.Value;
+
+            string str = System.Configuration.ConfigurationManager.ConnectionStrings["CXKdb"].ToString();
+
+           
+
         }
     }
 }

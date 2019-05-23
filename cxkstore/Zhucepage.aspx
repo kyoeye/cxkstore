@@ -7,6 +7,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link href="../css/CXKstyle.css" rel="stylesheet" type="text/css" />
+    <script>
+        $("test").click(function myfunction() {
+            $username.
+        })
+    </script>
    <style>
        .inputsty{
            height:30px;
@@ -24,7 +29,7 @@
 </head>
 <body runat="server" style="background-color:#333333;  position:relative">
     <div class="divJZ" runat="server">
-        <h1>注册用户</h1>
+        <h1 name="test" id="test" runat="server"  onclick="test">注册用户</h1>
         <!--啊-->
         <form id="ZCform" style="margin-top:50px" runat="server">
             <table style="width:500px;height:400px;text-align:left;margin:auto">
@@ -92,7 +97,7 @@
             <asp:Button CssClass="btncss_black" ID="loginbtn" OnClick="loginbtn_Click" CausesValidation="false" Text="返回登录" runat="server" />
            
         </form>
-        
+        <asp:LinqDataSource ID="lds" runat="server" ContextTypeName="LinktoCXK"  ></asp:LinqDataSource>
     </div>
 </body>
 </html>
