@@ -9,20 +9,9 @@ namespace cxkstore
 {
     public partial class GWCpage : System.Web.UI.Page
     {
-        protected void chkA11_CheckedChanged(object sender, EventArgs e)
-        {
-         
-        }
-        protected void Page_Load(object sender, EventArgs e)
+        protected void ldsproduct_Selecting(object sender, LinqDataSourceSelectEventArgs e)
         {
 
         }
-
-        protected void Unnamed_Click(object sender, EventArgs e)
-        {
-      
-        }
-
-       
     }
 }

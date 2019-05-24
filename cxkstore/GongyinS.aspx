@@ -24,12 +24,7 @@
            font-family:'Microsoft YaHei';
            font-size:16px;
        }
- #GongyinS td,#GongyinS th
-{
-	font-size:1em;
-	border:1px solid #98bf21;
-	padding:3px 7px 2px 7px;
-}
+
    </style>
 </head>
 <body runat="server" style="background-color:#333333;  position:relative">

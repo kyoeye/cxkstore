@@ -9,8 +9,16 @@
     <title></title>
 </head>
 <body>                                                              
-        <div>
-          
+        <div style="width:500px; height:500px;margin:auto">
+
+            <asp:GridView ID="gvproduct" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="gwcid" DataSourceID="ldsproduct" Width="254px">
+                <Columns>
+                    <asp:BoundField DataField="gwcid" HeaderText="gwcid" ReadOnly="True" SortExpression="gwcid" />
+                    <asp:BoundField DataField="userid" HeaderText="userid" SortExpression="userid" />
+                    <asp:BoundField DataField="phonenum" HeaderText="phonenum" SortExpression="phonenum" />
+                </Columns>
+            </asp:GridView>
+            <asp:LinqDataSource ID="ldsproduct" runat="server" ContextTypeName="cxkstore.CXKdbmlDataContext" EntityTypeName="" OnSelecting="ldsproduct_Selecting" TableName="GWCtable"></asp:LinqDataSource>
         </div>
 </body>
 </html>
