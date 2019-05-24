@@ -86,6 +86,9 @@
     <Content Include="images\u=945315310,1576619437&amp;fm=11&amp;gp=0.jpg" />
     <Content Include="images\mainpage\wp.jpg" />
     <Content Include="Mainpage.aspx" />
+    <Content Include="Testpage.aspx" />
+    <Content Include="mytestcontrol.ascx" />
+    <Content Include="userControl\CardUserControl.ascx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />
     <Content Include="XiangQingpage.aspx" />
@@ -126,6 +129,27 @@
       <DependentUpon>Master1.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testpage.aspx.cs">
+      <DependentUpon>Testpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Testpage.aspx.designer.cs">
+      <DependentUpon>Testpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mytestcontrol.ascx.cs">
+      <DependentUpon>mytestcontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mytestcontrol.ascx.designer.cs">
+      <DependentUpon>mytestcontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\CardUserControl.ascx.cs">
+      <DependentUpon>CardUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControl\CardUserControl.ascx.designer.cs">
+      <DependentUpon>CardUserControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserLogin.aspx.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -171,6 +195,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="images\OPPO\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
