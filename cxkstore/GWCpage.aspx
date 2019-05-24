@@ -1,32 +1,24 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Master1.Master"  CodeBehind="GWCpage.aspx.cs" Inherits="cxkstore.GWCpage" %>
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<!DOCTYPE html>
+    <!DOCTYPE html>
 
 <html>
   
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
     <title></title>
 </head>
 <body>                                                              
-        <div>
-            <asp:GridView ID="gvProduct" runat="server" AllowCustomPaging="true" AutoGenerateColumns="false" DataKeyNames="ProductId" DataSourceID="idsProduct" PageSize="5" >
-             <Columns>
-                 <asp:TemplateField>
-                     <ItemTemplate>
-                         <asp:CheckBox ID="chkItem" runat="server" />
-                     </ItemTemplate>
-                     <HeaderTemplate>
+        <div style="width:500px; height:500px;margin:auto">
 
-                     </HeaderTemplate>
-                 </asp:TemplateField>
-            
-             </Columns>
+            <asp:GridView ID="gvproduct" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="gwcid" DataSourceID="ldsproduct" Width="254px">
+                <Columns>
+                    <asp:BoundField DataField="gwcid" HeaderText="gwcid" ReadOnly="True" SortExpression="gwcid" />
+                    <asp:BoundField DataField="userid" HeaderText="userid" SortExpression="userid" />
+                    <asp:BoundField DataField="phonenum" HeaderText="phonenum" SortExpression="phonenum" />
+                </Columns>
             </asp:GridView>
-             <asp:Button runat="server" Text="删除"  OnClick="Unnamed_Click"/>
-             <asp:Button runat="server" Text="清空购物车" />
-            <asp:Button runat="server" Text="结算" />
-            <asp:Button runat="server" Text="重新计算" />
+            <asp:LinqDataSource ID="ldsproduct" runat="server" ContextTypeName="cxkstore.CXKdbmlDataContext" EntityTypeName="" OnSelecting="ldsproduct_Selecting" TableName="GWCtable"></asp:LinqDataSource>
         </div>
 </body>
 </html>

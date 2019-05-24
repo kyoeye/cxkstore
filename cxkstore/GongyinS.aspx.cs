@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace cxkstore
 {
-    public partial class GWCpage : System.Web.UI.Page
+    public partial class GongyinS : System.Web.UI.Page
     {
-        protected void ldsproduct_Selecting(object sender, LinqDataSourceSelectEventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
 
         }

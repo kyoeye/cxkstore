@@ -13,12 +13,21 @@ namespace cxkstore {
     public partial class GWCpage {
         
         /// <summary>
-        /// gvProduct 控件。
+        /// gvproduct 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvProduct;
+        protected global::System.Web.UI.WebControls.GridView gvproduct;
+        
+        /// <summary>
+        /// ldsproduct 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinqDataSource ldsproduct;
     }
 }
