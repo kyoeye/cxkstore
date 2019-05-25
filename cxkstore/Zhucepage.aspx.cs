@@ -42,7 +42,7 @@ namespace cxkstore
             {
                 SqlCommand sqlc = sc.CreateCommand();
                 sc.Open();
-                sqlc.CommandText = string.Format("insert into Userdb(username,sex,password,shouhuodizhi,phonenum) values(N'{0}',@sex,@password,N'{1}',@phonenum)",Name,DiZhi);
+                sqlc.CommandText = string.Format("insert into Userdb(username,sex,password,shouhuodizhi,phonenum) values(N'{0}',@sex,@password,N'{1}',@phonenum)", username, DiZhi);
                 sqlc.Parameters.AddWithValue("@sex", Sex);
                 sqlc.Parameters.AddWithValue("@password", Password);//正常来说密码应该加密存储
                 sqlc.Parameters.AddWithValue("@phonenum", PhoneNum);
