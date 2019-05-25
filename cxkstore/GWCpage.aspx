@@ -9,16 +9,26 @@
     <title></title>
 </head>
 <body>                                                              
-        <div style="width:500px; height:500px;margin:auto">
-
-            <asp:GridView ID="gvproduct" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="gwcid" DataSourceID="ldsproduct" Width="254px">
-                <Columns>
-                    <asp:BoundField DataField="gwcid" HeaderText="gwcid" ReadOnly="True" SortExpression="gwcid" />
-                    <asp:BoundField DataField="userid" HeaderText="userid" SortExpression="userid" />
-                    <asp:BoundField DataField="phonenum" HeaderText="phonenum" SortExpression="phonenum" />
-                </Columns>
-            </asp:GridView>
-            <asp:LinqDataSource ID="ldsproduct" runat="server" ContextTypeName="cxkstore.CXKdbmlDataContext" EntityTypeName="" OnSelecting="ldsproduct_Selecting" TableName="GWCtable"></asp:LinqDataSource>
+        <div style="width:600px; height:600px;margin:auto">
+        <table class="auto-style9">
+            <td class="auto-style5">
+                &nbsp; &nbsp;<th class="auto-style1">
+                    编号
+                </th>
+                 <th class="auto-style4">
+                    手机名
+                </th>
+                  <th class="auto-style6" >
+                    手机价格
+                </th>
+                  <th class="auto-style7" >
+                    数量
+                </th>
+                  <th class="auto-style8" >
+                    小计
+                </th>
+            </td>
+        </table>
         </div>
 </body>
 </html>
@@ -26,5 +36,31 @@
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
     <style type="text/css">
         .datable {}
+        .auto-style1 {
+            width: 104px;
+            height: 20px;
+        }
+        .auto-style4 {
+            width: 91px;
+            height: 20px;
+        }
+        .auto-style5 {
+            height: 20px;
+        }
+        .auto-style6 {
+            width: 73px;
+            height: 20px;
+        }
+        .auto-style7 {
+            width: 70px;
+            height: 20px;
+        }
+        .auto-style8 {
+            width: 80px;
+            height: 20px;
+        }
+        .auto-style9 {
+            width: 504px;
+        }
     </style>
 </asp:Content>

@@ -100,7 +100,7 @@
                         </table>
                     </div>
                     <br />
-                    <button id="LoginButton1" class="btncss_black" runat="server">登录</button> <!--想了下改用外联样式了-->
+                    <asp:Button  ID="LoginButton1"  CssClass="btncss_black"  Text="登陆" runat="server" OnClick="LoginButton1_Click"></asp:Button> <!--想了下改用外联样式了-->
                     <asp:LinkButton ID="ZCButton"   Text="新用户注册" CssClass="linkbuttoncss"  OnClick="ZCButton_Click" Font-Size="10" runat="server" />
                 </div>
             </div>

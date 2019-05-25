@@ -1,2 +1,2 @@
-﻿insert into GWCtable(userid,phonenum) values(1009,107)
-insert into GWCtable(userid,phonenum) values(1009,108)
+﻿Select username='蔡徐坤', password='14564' from Userdb
+Select * from Userdb where username=N'小梅少' and password='18888'
