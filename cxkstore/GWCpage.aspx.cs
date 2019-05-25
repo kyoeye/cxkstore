@@ -13,5 +13,15 @@ namespace cxkstore
         {
 
         }
+
+        protected void gvProduct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
