@@ -71,6 +71,9 @@
                   <asp:Image Height="25px"  CssClass="logo"  ImageUrl="~/images/icon/lanqiu.png" runat="server" />
               </div>
                 <div style="float:right;padding:0px;margin:0 auto;text-align:center">
+              <asp:Label ID="lblMsg" runat="server"  >
+               </asp:Label>
+                    <asp:LinkButton ID="lnkbtnLogout" runat="server" Visible="false" OnClick="lnkbtnLogout_Click">退出登录</asp:LinkButton>
                      <a  class="a" runat="server">
                         <asp:Image  Height="18px" CssClass="img"  ImageUrl="~/images/icon/sousuo.png"  runat="server"/>
                     </a>
