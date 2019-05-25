@@ -11,6 +11,17 @@
     border-radius: 5px;
    margin:0 auto;
 }
+/不限制高度的div*/
+.divJZ {
+    overflow: hidden;
+    background-color: white;
+    width: 600px;
+   height:auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
 /*按钮*/
 .btncss {
     color: #ffffff;

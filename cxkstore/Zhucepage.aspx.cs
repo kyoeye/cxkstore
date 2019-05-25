@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Timers;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -11,7 +12,7 @@ namespace cxkstore
     public partial class Zhucepage : System.Web.UI.Page
     {
         string cxkdb = System.Configuration.ConfigurationManager.ConnectionStrings["CXKdbConnectionString"].ConnectionString; //数据库连接字串
-
+        int a = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -21,6 +22,7 @@ namespace cxkstore
         {
             Response.Redirect("UserLogin.aspx");
         }
+ 
 
         protected void ZhuCebtn_Click(object sender, EventArgs e)
         {
@@ -48,13 +50,21 @@ namespace cxkstore
                 sqlc.Parameters.AddWithValue("@phonenum", PhoneNum);
                 int m = sqlc.ExecuteNonQuery();
                 if (m == 0)
-                   test.Text = "注册失败！请重新注册。";
+                {
+                    test.Text = "注册失败！请重新注册。";
+                }
                 else
+                {
                     test.Text = "注册成功！";
+                    a++;
+                    ZhuCebtn.Text = "注册成功，正在为您跳转登录";
+                    this.Page.ClientScript.RegisterStartupScript(this.Page.GetType(), "", "<script language='javascript'>jumptime();</script>", false);
+                }
+                 
             }
-
-           
-
         }
+
+
+
     }
 }

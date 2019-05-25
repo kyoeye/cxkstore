@@ -8,7 +8,13 @@
     <title></title>
     <link href="../css/CXKstyle.css" rel="stylesheet" type="text/css" />
     <script>
-   
+        var t = 3;
+        function jumptime() {
+            if (t = 1) {
+                window.location.href="UserLogin.aspx"
+            }
+            setTimeout('jumptime()', 1000);
+        }
     </script>
    <style>
        .inputsty{
@@ -58,7 +64,7 @@
                     </td>
                     <td>
                         <input type="password" class="inputsty" id="passwordrfv" runat="server" name="passwordrfv" />
-
+                        <asp:CompareValidator ErrorMessage="老伙计，第二次输入的密码和原密码不太一样啊" Text="*"  ForeColor="red" ControlToCompare="password" ControlToValidate="passwordrfv" runat="server" />
                     </td>
                 </tr>
                 <tr>
@@ -84,6 +90,8 @@
                     </td>
                     <td>
                         <input id="dizhi" name="dizhi"  runat="server" class="inputsty" type="text" />
+                         <asp:RequiredFieldValidator ErrorMessage="老伙计，你家水表地址在哪" Text="*" ForeColor="red" Display="Dynamic" ControlToValidate="dizhi" runat="server" />
+
                     </td>
                 </tr>
             </table>
@@ -92,8 +100,7 @@
             <br />
             <asp:Button CssClass="btncss_black" Text="注册" ID="ZhuCebtn" OnClick="ZhuCebtn_Click" runat="server" /><br />
             <br />
-            <asp:Button CssClass="btncss_black" ID="loginbtn" OnClick="loginbtn_Click" CausesValidation="false" Text="返回登录" runat="server" />
-           
+            <asp:Button CssClass="btncss_black" ID="loginbtn" OnClick="loginbtn_Click" CausesValidation="false" Text="返回登录" runat="server" /><br />
         </form>
         <asp:LinqDataSource ID="lds" runat="server" ContextTypeName="LinktoCXK"  ></asp:LinqDataSource>
     </div>
