@@ -24,7 +24,7 @@ namespace cxkstore
             cardcontrol.cardTitle = "测试标题";
             cardcontrol.jieShao = "测试标题";
             cardcontrol.jiaGe = "9999";
-            test3();
+            test4();
 
         }
         public  IList<string> mulist = new List<string>();
@@ -48,6 +48,17 @@ namespace cxkstore
                 control.Texttest = stritem;
             }
            
+        }
+        public void test4()
+        {
+            //通过循环创建用户控件，让它在ul1中创建
+            foreach (string stritem in mulist)
+            {
+                CardUserControl control = (CardUserControl)Page.LoadControl("~/userControl/CardUserControl.ascx");
+                Ul1.Controls.Add(control);
+                control.cardTitle = stritem;
+            }
+
         }
 
         public void test2()

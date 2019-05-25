@@ -18,19 +18,19 @@
         <div runat="server">
             <asp:Label Text="text" ID="test222" runat="server" />
             <ul id="fukul" runat="server" >
-
                 <%foreach(string stritem in mulist)
                     {%>
-                <li >
+                <li class="t">
                     <%=stritem%>
                     <uc2:mytestcontrol runat="server" ID="mytestcontrol"  />
                     </li>
-                <%} %>
-                    
+                <%} %>               
             </ul>
+     
+
                         <ul id="Ul1" runat="server" >              
             </ul>
-            <uc2:CardUserControl runat="server" ID="cardcontrol" />
+            <uc2:CardUserControl runat="server"  ID="cardcontrol" />
         </div>
 
 </body>
