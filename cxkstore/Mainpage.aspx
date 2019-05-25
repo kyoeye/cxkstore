@@ -28,7 +28,7 @@
                             <img src="images/u=945315310,1576619437&amp;fm=11&amp;gp=0.jpg" style="width: 700px;">
                         </div>
                         <div style="float: right; text-align: right; width: 50px; height: 400px; margin: auto;">
-                            <button id="ContentPlaceHolder1_LoginButton1" class="btncss_black_L">那么哪里可以买到呢</button>
+                            <asp:Button runat="server"  ID="ContentPlaceHolder1_LoginButton1" Text="那么哪里可以买到呢"  CssClass="btncss_black_L"></asp:Button>
                         </div>
                         <div style="float: right; width: 445px; height: 395px; margin: auto; text-align: left">
                             <div style="width: 395px; height: 395px; margin: auto;">

@@ -87,6 +87,8 @@
     padding: 7px 20px 7px 20px;
     width: 50px;
     height: 400px;
+   
+    text-wrap:unset;
 }
 
     .btncss_black_L:hover {
@@ -96,6 +98,7 @@
         background-color: #534e4e;
         border-radius: 5px;
         padding: 7px 20px 7px 20px;
+        text-wrap: normal;
         width: 50px;
         height: 400px;
     }
@@ -107,6 +110,7 @@
         background-color: #1c1b1b;
         border-radius: 5px;
         padding: 7px 20px 7px 20px;
+        text-wrap: normal;
         width: 50px;
         height: 400px;
     }
