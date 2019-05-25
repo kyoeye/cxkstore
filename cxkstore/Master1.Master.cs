@@ -11,22 +11,40 @@ namespace cxkstore
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-         if(Request.Cookies["Username"] != null)
+      
+         if(Request.Cookies["tt2"].Value != "")
             {
                 string t2 = HttpUtility.UrlDecode(Request.Cookies["tt2"].Value);
-                sssss.Text=t2 + "，欢迎你回来！";
+                tologin.Text=t2 + "，欢迎你回来！";
+                lnkbtnLogout.Visible = true;
             }
          else
             {
-          //      Response.Redirect("UserLogin.aspx");
+                tologin.Text = "亲，请登录！";
+                lnkbtnLogout.Visible = false;
+
             }
 
         }
 
         protected void lnkbtnLogout_Click(object sender, EventArgs e)
         {
-          
-           
+            HttpCookie ck = Response.Cookies["tt2"];
+            if(ck!=null)
+            {
+                ck.Values.Remove("tt2");
+            }
+       
+                lnkbtnLogout.Visible = false;
+                Response.AddHeader("Refresh", "0");
+       
+ 
+        }
+
+
+        protected void tologin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserLogin.aspx");
         }
     }
 }
