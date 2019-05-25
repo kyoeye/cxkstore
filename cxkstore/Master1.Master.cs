@@ -13,11 +13,12 @@ namespace cxkstore
         {
          if(Request.Cookies["Username"] != null)
             {
-                lblMsg.Text=Request.Cookies["Username"].Value + "，欢迎你回来！";
+                string t2 = HttpUtility.UrlDecode(Request.Cookies["tt2"].Value);
+                sssss.Text=t2 + "，欢迎你回来！";
             }
          else
             {
-                Response.Redirect("UserLogin.aspx");
+          //      Response.Redirect("UserLogin.aspx");
             }
 
         }
