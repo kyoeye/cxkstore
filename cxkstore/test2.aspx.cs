@@ -11,7 +11,7 @@ namespace cxkstore
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            tt1.Text = Request.QueryString["ttext"];
+            tt1.Text = Request.QueryString["phonename"];
         }
     }
 }

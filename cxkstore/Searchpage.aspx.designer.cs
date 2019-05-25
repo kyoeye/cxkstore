@@ -7,45 +7,45 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace cxkstore.userControl {
+namespace cxkstore {
     
     
-    public partial class CardUserControl {
+    public partial class Searchpage {
         
         /// <summary>
-        /// img3 控件。
+        /// search_textbox 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage img3;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText search_textbox;
         
         /// <summary>
-        /// TitleLable 控件。
+        /// gga 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TitleLable;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor gga;
         
         /// <summary>
-        /// jieshao 控件。
+        /// Tostlable 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl jieshao;
+        protected global::System.Web.UI.WebControls.Label Tostlable;
         
         /// <summary>
-        /// JiageLable 控件。
+        /// Ul1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label JiageLable;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Ul1;
     }
 }

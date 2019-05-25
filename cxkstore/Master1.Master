@@ -42,6 +42,7 @@
     }
     .logo{
         margin:0 auto;
+        height:40px;
         padding:5px;
     }
     .a{
@@ -50,7 +51,7 @@
          display:inline-block;
          margin:0 auto;
          text-align:center;
-         line-height:35px;
+         line-height:40px;
     }
      .a:hover{
          height:40px;
@@ -59,7 +60,7 @@
          margin:0 auto;
          opacity:0.5;
          text-align:center;
-         line-height:35px;
+         line-height:40px;
     }
         </style>
 </head>
@@ -68,10 +69,12 @@
         <div>
             <div style="background-color:#333333;color:white;padding:0px;height:40px;text-align:center">
               <div  style="float:left;height:40px;width:40px;margin:0 auto;">
-                  <asp:Image Height="25px"  CssClass="logo"  ImageUrl="~/images/icon/lanqiu.png" runat="server" />
+                  <a href="Mainpage.aspx">                
+                      <img  style="height:30px"    class="logo"  src="~/images/icon/lanqiu.png" runat="server" />
+</a>
               </div>
                 <div style="float:right;padding:0px;margin:0 auto;text-align:center">
-                     <a  class="a" runat="server">
+                     <a href="~/Searchpage.aspx" class="a" runat="server">
                         <asp:Image  Height="18px" CssClass="img"  ImageUrl="~/images/icon/sousuo.png"  runat="server"/>
                     </a>
                     <asp:Button Text="我的"  runat="server"   class="btncss_black" />

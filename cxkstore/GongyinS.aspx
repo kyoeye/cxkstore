@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GongyinS.aspx.cs" Inherits="cxkstore.GongyinS" %>
+﻿  <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GongyinS.aspx.cs" Inherits="cxkstore.GongyinS" %>
 
 <!DOCTYPE html>
 

@@ -83,10 +83,13 @@
     <Content Include="images\icon\gouwuchekong.png" />
     <Content Include="images\icon\lanqiu.png" />
     <Content Include="images\icon\sousuo.png" />
+    <Content Include="images\OPPO\OPPOr15 %281%29.jpg" />
+    <Content Include="images\OPPO\OPPOreno %281%29.jpg" />
     <Content Include="images\timgQM1F6PZZ.jpg" />
     <Content Include="images\u=945315310,1576619437&amp;fm=11&amp;gp=0.jpg" />
     <Content Include="images\mainpage\wp.jpg" />
     <Content Include="Mainpage.aspx" />
+    <Content Include="Searchpage.aspx" />
     <Content Include="test2.aspx" />
     <Content Include="Testpage.aspx" />
     <Content Include="mytestcontrol.ascx" />
@@ -137,7 +140,15 @@
     <Compile Include="Master1.Master.designer.cs">
       <DependentUpon>Master1.Master</DependentUpon>
     </Compile>
+    <Compile Include="Models\LiknModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Searchpage.aspx.cs">
+      <DependentUpon>Searchpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Searchpage.aspx.designer.cs">
+      <DependentUpon>Searchpage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="test2.aspx.cs">
       <DependentUpon>test2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -210,10 +221,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\OPPO\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>

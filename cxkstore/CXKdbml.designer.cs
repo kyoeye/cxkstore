@@ -1173,8 +1173,8 @@ namespace cxkstore
     partial void OnpchengbenChanged();
     partial void OnpkucunChanging(System.Nullable<int> value);
     partial void OnpkucunChanged();
-    #endregion
-		
+        #endregion
+        /*
 		public Phonexinxi()
 		{
 			this._DDxinxi = new EntitySet<DDxinxi>(new Action<DDxinxi>(this.attach_DDxinxi), new Action<DDxinxi>(this.detach_DDxinxi));
@@ -1183,8 +1183,8 @@ namespace cxkstore
 			this._GYSxinxi = default(EntityRef<GYSxinxi>);
 			OnCreated();
 		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonenum", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		*/
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phonenum", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string phonenum
 		{
 			get
