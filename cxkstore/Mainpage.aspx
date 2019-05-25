@@ -13,7 +13,7 @@
         <div style="text-align: center">
             <div style="text-align: center; height: 200px; background-repeat: no-repeat; background-color: gray; background-image: url(images/mainpage/wp.jpg); background-position: center">
                 <div style="height: 200px; width: 700px; margin: auto; text-align: center;">
-                    <label style="font-size: 40px; font-family: 'Microsoft YaHei'; line-height: 200px; color: white; /* float: left; *//* width: 500px; *//* margin: auto; *//* margin-left: auto; *//* text-align: justify; *//* max-width: max-content; *//* position: initial; */">嘿，你想要的这里都没有</label>
+                    <label style="font-size: 40px; font-family: 'Microsoft YaHei';  margin:auto;line-height: 200px; color: white;">嘿，你想要的这里都没有</label>
                 </div>
 
             </div>
