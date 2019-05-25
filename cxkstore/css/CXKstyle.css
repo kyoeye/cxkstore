@@ -11,7 +11,7 @@
     border-radius: 5px;
    margin:0 auto;
 }
-/不限制高度的div*/
+/*不限制高度的div*/
 .divJZ {
     overflow: hidden;
     background-color: white;
@@ -65,7 +65,9 @@
     width: auto;
     height: auto;
 }
-
+.btncss_black image{
+    width:10px;height:10px;
+}
     .btncss_black:hover {
         color: #fff;
         border: none;

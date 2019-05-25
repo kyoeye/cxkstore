@@ -7,17 +7,21 @@ using System.Web.UI.WebControls;
 
 namespace cxkstore.userControl
 {
+    /// <summary>
+    /// card提供：cardTitle标题,imgUrl图片地址,jieShao介绍,jiaGe价格
+    /// Luo
+    /// </summary>
     public partial class CardUserControl : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             TitleLable.Text = cardTitle;
-            img.ImageUrl = imgUrl ;
-         //   jieshao.InnerText = "ddd";
-            JiageLable.Text = jiaGe;
+            img3.Src = imgUrl ;
+            jieshao.InnerText = jieShao;
+            JiageLable.Text = "¥ " + jiaGe+"起";
             try
             {
-                jump = "test2.aspx?ttext=" + cardTitle;
+                jump = "test2.aspx?phonename=" + cardTitle;
             }
             catch
             {
@@ -32,7 +36,7 @@ namespace cxkstore.userControl
  
         protected void Unnamed_Click(object sender, EventArgs e)
         {
-            Response.Redirect("test2.aspx?ttext=" + cardTitle);
+            Response.Redirect("test2.aspx?phonename=" + cardTitle);
         }
         public static  string Divclick()
         {

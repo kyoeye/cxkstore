@@ -58,7 +58,8 @@ namespace cxkstore
                     test.Text = "注册成功！";
                     a++;
                     ZhuCebtn.Text = "注册成功，正在为您跳转登录";
-                    this.Page.ClientScript.RegisterStartupScript(this.Page.GetType(), "", "<script language='javascript'>jumptime();</script>", false);
+                    //后台是不能用timer计时跳转的，所以用js写了个计时跳转，然后后台再触发
+                    this.Page.ClientScript.RegisterStartupScript(this.Page.GetType(), "", "<script language='javascript'>jumptime();</script>", false); 
                 }
                  
             }

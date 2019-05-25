@@ -28,10 +28,10 @@ namespace cxkstore
             string Name, Password;
             Name = userName.Text;
             Password = userPassword.Text;
-            using (SqlConnection sc = new SqlConnection(cxkdb))
+            using (SqlConnection sc = new SqlConnection(cxkdb))//放入连接字串
             {
                 SqlCommand sqlc = sc.CreateCommand();
-                sc.Open();
+                sc.Open();//打开数据库
                 sqlc.CommandText = string.Format(" Select* from Userdb where username = N'{0}' and password = @password", Name);
                 //Select * from Userdb where username = N'蔡徐坤' and password = '14564'
                 sqlc.Parameters.AddWithValue("@password", Password);//正常来说密码应该加密存储
@@ -67,4 +67,5 @@ namespace cxkstore
 
         }
     }
+    
 }
