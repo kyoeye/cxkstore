@@ -23,7 +23,6 @@ namespace cxkstore
                 {
                     tologin.Text = "亲，请登录！";
                     lnkbtnLogout.Visible = false;
-
                 }
             }
             catch

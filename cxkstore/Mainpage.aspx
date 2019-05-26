@@ -15,9 +15,7 @@
                 <div style="height: 200px; width: 700px; margin: auto; text-align: center;">
                     <label style="font-size: 40px; font-family: 'Microsoft YaHei';  margin:auto;line-height: 200px; color: white;">嘿，你想要的这里都没有</label>
                 </div>
-
             </div>
-
             <div style="text-align: center; width: 1000px; margin: auto; border-radius: 5px;">
                 <h1 class="texttitle" style="margin: 30px;">蔡徐坤，出来打球</h1>
                 
@@ -28,7 +26,7 @@
                             <img src="images/u=945315310,1576619437&amp;fm=11&amp;gp=0.jpg" style="width: 700px;">
                         </div>
                         <div style="float: right; text-align: right; width: 50px; height: 400px; margin: auto;">
-                            <asp:Button runat="server" ID="ContentPlaceHolder1_LoginButton1" Text="那么哪里可以买到呢" CssClass="btncss_black_L"></asp:Button>
+                              <asp:Button runat="server" ID="ContentPlaceHolder1_LoginButton1" Text=">" CssClass="btncss_black_L"></asp:Button>
                         </div>
                         <div style="float: right; width: 445px; height: 395px; margin: auto; text-align: left">
                             <div style="width: 395px; height: 395px; margin: auto;">

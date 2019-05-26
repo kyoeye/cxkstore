@@ -8,78 +8,26 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <style>
-       .btncss_black {
-    color: #ffffff;
-    border: none;
-    font-family: 'Microsoft YaHei';
-    background-color: #1c1b1b;
-    border-radius: 5px;
-      width: 70px;
-        height: 40px;
-}
+   <link href="css/Masterstyle.css" rel="stylesheet" type="text/css" />
 
-    .btncss_black:hover {
-        color: #fff;
-        border: none;
-        font-family: 'Microsoft YaHei';
-        background-color: #534e4e;
-        border-radius: 5px;
-        width: 70px;
-        height: 40px;
-    }
-    .btncss_black:active {
-        color: #fff;
-        border: none;
-        font-family: 'Microsoft YaHei';
-        background-color: #1c1b1b;
-        border-radius: 5px;
-        width: 70px;
-        height: 40px;
-    }
-    .img{
-        margin:0 auto;
-    }
-    .logo{
-        margin:0 auto;
-        padding:5px;
-    }
-    .a{
-         height:40px;
-         width:70px;
-         display:inline-block;
-         margin:0 auto;
-         text-align:center;
-         line-height:35px;
-    }
-     .a:hover{
-         height:40px;
-         width:70px;
-         display:inline-block;
-         margin:0 auto;
-         opacity:0.5;
-         text-align:center;
-         line-height:35px;
-    }
-        </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <div style="background-color:#333333;color:white;padding:0px;height:40px;text-align:center">
-              <div  style="float:left;height:40px;width:40px;margin:0 auto;">
-                  <asp:Image Height="25px"  CssClass="logo"  ImageUrl="~/images/icon/lanqiu.png" runat="server" />
-              </div>
-                <div style="float:right;padding:0px;margin:0 auto;text-align:center">
-                    <asp:Button Text="亲，请登录！" ID="tologin"  runat="server"    OnClick="tologin_Click"  class="btncss_black" />
+              <a href="Mainpage.aspx"  style="float:left;height:40px;width:40px;margin:0 auto;">
+                  <asp:Image Height="25px"  CssClass="img_m"  ImageUrl="~/images/icon/lanqiu.png" runat="server" />
+              </a>
+                <div style="float:right;padding:0px;;text-align:center">
+                    <asp:Button Text="亲，请登录！" ID="tologin"  runat="server"    OnClick="tologin_Click"    class="btncss_m_black" />
                     <asp:LinkButton ID="lnkbtnLogout" runat="server" Visible="false" OnClick="lnkbtnLogout_Click">退出登录</asp:LinkButton>
-                     <a  class="a" runat="server">
-                        <asp:Image  Height="18px" CssClass="img"  ImageUrl="~/images/icon/sousuo.png"  runat="server"/>
+                     <a  href="~/Searchpage.aspx" class="a_m" runat="server">
+                        <asp:Image  Height="18px" CssClass="img_m"  ImageUrl="~/images/icon/sousuo.png"  runat="server"/>
                     </a>
-                    <asp:Button Text="我的"  runat="server"   class="btncss_black" />
-                      <asp:Button Text="订单"  runat="server"  class="btncss_black" />
-                      <a  class="a" runat="server">
-                        <asp:Image  Height="18px" CssClass="img"  ImageUrl="~/images/icon/gouwuchekong.png"  runat="server"/>
+                    <asp:Button Text="我的"  runat="server"   class="btncss_m_black" />
+                      <asp:Button Text="订单"  runat="server"  class="btncss_m_black" />
+                      <a  class="a_m" runat="server">
+                        <asp:Image  Height="18px" CssClass="img_m"  ImageUrl="~/images/icon/gouwuchekong.png"  runat="server"/>
                     </a>
                 </div>
             </div>

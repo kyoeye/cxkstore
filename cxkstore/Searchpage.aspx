@@ -42,7 +42,7 @@
         }
     </style>
 </head>
-<body>
+<body style="margin:0">
     <div style="text-align:center">
         <div style="margin:auto;margin-bottom:20px;margin-top:20px;Width:480px; Height:45px">        
             <input type="text" id="search_textbox" name="search_textbox"  class="inputsty" style="float:left" runat="server"/> 

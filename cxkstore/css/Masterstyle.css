@@ -1,0 +1,65 @@
+﻿body {
+}
+.btncss_m_black {
+    color: #ffffff;
+    border: none;
+    font-family: 'Microsoft YaHei';
+    background-color: #1c1b1b;
+    border-radius: 5px;
+    padding-left:10px;
+    padding-right:10px;
+    width: auto;
+    height: 40px;
+}
+
+    .btncss_m_black:hover {
+        color: #fff;
+        border: none;
+        font-family: 'Microsoft YaHei';
+        background-color: #534e4e;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: auto;
+        height: 40px;
+    }
+
+    .btncss_m_black:active {
+        color: #fff;
+        border: none;
+        font-family: 'Microsoft YaHei';
+        background-color: #1c1b1b;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: auto;
+        height: 40px;
+    }
+
+.img_m {
+    margin: 0 auto;
+}
+
+.logo_m {
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.a_m {
+    height: 40px;
+    width: 70px;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 35px;
+}
+
+    .a_m:hover {
+        height: 40px;
+        width: 70px;
+        display: inline-block;
+        margin: 0 auto;
+        opacity: 0.5;
+        text-align: center;
+        line-height: 35px;
+    }

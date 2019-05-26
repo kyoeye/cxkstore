@@ -77,6 +77,8 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\CXKstyle.css" />
+    <Content Include="css\Masterstyle.css" />
+    <Content Include="css\XQstyle.css" />
     <Content Include="Global.asax" />
     <Content Include="GongyinS.aspx" />
     <Content Include="GWCpage.aspx" />

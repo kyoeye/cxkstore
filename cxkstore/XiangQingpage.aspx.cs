@@ -11,6 +11,7 @@ namespace cxkstore
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+          //  imgg. = "../images/OPPO/" + phonexinxis[i].phonename + "%20(1).jpg";
 
         }
     }
