@@ -1,7 +1,82 @@
 ﻿body {
+    margin: 0;
 }
 .Lable_Title{
     font-size:50px;
     font-family:'Microsoft YaHei';
-    font-weight:500;
+    font-weight:600;
 }
+.Lable_zw{
+    font-size:18px;
+    font-family:'Microsoft YaHei';
+    font-weight:300;
+    text-wrap:normal;
+}
+.Lable_pp {
+    font-size: 18px;
+    font-family: 'Microsoft YaHei';
+    font-weight: 300;
+    width: 100px;
+    line-height:60px;
+}
+.Lable_pzxx_Title {
+    font-size: 20px;
+    font-family: 'Microsoft YaHei';
+    font-weight: 600;
+}
+.Lable_titletext {
+    font-size: 25px;
+    font-family: 'Microsoft YaHei';
+    font-weight: 300;
+    text-align:left;
+    margin-left:100px;
+}
+.Lable_titletext2 {
+    font-size: 25px;
+    font-family: 'Microsoft YaHei';
+    font-weight: 300;
+    text-align: left;
+    line-height:70px;
+    margin-left: 100px;
+}
+.btncss_xq_black {
+    color: #ffffff;
+    border: none;
+    font-family: 'Microsoft YaHei';
+    background-color: #1c1b1b;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 17px;
+    width: auto;
+    height: 40px;
+    letter-spacing: 3px;
+    margin: 0 10px 0 10px;
+}
+
+    .btncss_xq_black:hover {
+        color: #fff;
+        border: none;
+        font-family: 'Microsoft YaHei';
+        background-color: #534e4e;
+        border-radius: 5px;
+        letter-spacing: 3px;
+        padding-left: 20px;
+        padding-right: 17px;
+        width: auto;
+        height: 40px;
+        margin: 0 10px 0 10px;
+    }
+
+    .btncss_xq_black:active {
+        color: #fff;
+        border: none;
+        font-family: 'Microsoft YaHei';
+        background-color: #1c1b1b;
+        letter-spacing: 3px;
+        border-radius: 5px;
+        padding-left: 20px;
+        padding-right: 17px;
+        width: auto;
+        height: 40px;
+        margin: 0 10px 0 10px;
+    }

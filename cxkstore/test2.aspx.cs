@@ -13,5 +13,6 @@ namespace cxkstore
         {
             tt1.Text = Request.QueryString["phonename"];
         }
+        public string ttttt= "test2.aspx?phonename=测试boot";
     }
 }
