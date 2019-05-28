@@ -13,9 +13,13 @@
     }
 </style>
 <link href="../css/CXKstyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
 <br />
+                
+
 <div id="click_div"   onclick="location.href = '<%=jump%>';"style="width: 1000px; height: 250px; margin-top:10px; margin-bottom:10px; background-color: #f1f1f1; color: #1d1d1d; margin: auto; border-radius: 5px; overflow: hidden;border:3px solid #3e3e3e" >
- <!--jump是在后台拼接好的跳转url，用js的做的跳转    5月25 QAQ 这个好像只要用onseverclick就行了。。。根本不用JS。。。-->
+<!--jump是在后台拼接好的跳转url，用js的做的跳转    5月25 QAQ 这个好像只要用onseverclick就行了。。。根本不用JS。。。-->
     <div style="overflow: hidden; height: 250px; width: 300px; float: left; text-align: center;border-color:darkgray">
                               <img id="img3" runat="server" style="height:324px"   src="../images/OPPO/OPPOreno%20(1).jpg" />
                        </div>
@@ -25,9 +29,9 @@
             </div>
     <div  style="float:right;margin:200px 10px 10px 10px">
                   <asp:Label ID="JiageLable" CssClass="jiage" Text="2333元"     runat="server"/>
-        <!--
-        <asp:Button Text="text"  OnClick="Unnamed_Click" CssClass="btncss_black" runat="server" />
-        -->
+       
+      
+      
     </div>
 
-</div>    
+</div>     

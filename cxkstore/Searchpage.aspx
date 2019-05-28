@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
         <link href="../css/CXKstyle.css" rel="stylesheet" type="text/css" />
     <style>
             .zw{
@@ -51,7 +52,9 @@
                     </a>
 </div>
         <asp:Label ID="Tostlable" Text="抱歉，这个真没有" Visible="false" CssClass="zw" runat="server" />
-         <ul id="Ul1" style="padding-left:0"  runat="server" />           
+         <ul id="Ul1" style="padding-left:0"  runat="server" />    
+
+        </div>
     </div>
 </body>
 </html>

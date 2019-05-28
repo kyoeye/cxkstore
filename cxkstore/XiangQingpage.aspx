@@ -7,6 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title></title>
         <link href="css/XQstyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
         <link href="../css/CXKstyle.css" rel="stylesheet" type="text/css" />
         <style>
             .image {
@@ -20,6 +21,7 @@
                 font-weight: 400;
             }
         </style>
+    
     </head>
     <body>
         <div style="background-color:white">
@@ -59,14 +61,34 @@
                         <asp:Label ID="Label2" CssClass="Lable_zw" Text="双脚离地了，病毒就关闭了，聪明的智商又占领高地了，123" runat="server" />
                       <br />
                         <br />
+                       <asp:ListView  runat="server" >
+
+                       </asp:ListView>
+                        <div id="buttonlist" class="list-group">
+                            <% foreach (string ttt in mulist2)
+                                {%>
+                           <button id="gsf" type="button"  class="list-group-item"  onclick="tsts('<%=ttt%>')"   ><%=ttt%></button>                      
+                            <%} %>
+                            <script type="text/javascript">
+                                function tsts(str) {
+                                    document.getElementById('Label7').innerHTML = str;
+                                    var tts = encodeURI(str);
+                                    var ajx = new XMLHttpRequest();
+                                    ajx.open("get", "XiangQingpage.aspx?test=" + tts, true);
+                                    ajx.send();
+                                }                    
+                            </script>                   
+                        </div>                     
                         <br />
                       
                    
                         </div>
                 </div>      
             <div style="height:70px;background-color:#f3f3f3;position:fixed;bottom:0px;width:100%">            
-                <asp:Label ID="Label5" CssClass="Lable_titletext2" Text="手机名字" runat="server" />
-                <div style="width:auto;height:100%; line-height:70px;padding:0 20px 0 20px;background-color:#f3f3f3;float:right">
+                <asp:Label ID="Label6" CssClass="Lable_titletext2" Text="手机名字" runat="server" />
+                <label id="Label7" class="Lable_titletext_yspz" ></label>
+                <asp:Label ID="Label5" CssClass="Lable_titletext_yspz" Text="选择的配置" runat="server" />
+                <div style="width:auto;height:100%;padding:15px 20px 0 20px;background-color:#f3f3f3;float:right">
                        <asp:Button Text="添加到购物车"  runat="server"   class="btncss_xq_black" />
                       <asp:Button Text="一键购买"  BackColor="#ff3535" runat="server"   class="btncss_xq_black" />
                 </div>

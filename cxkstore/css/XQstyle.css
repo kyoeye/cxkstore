@@ -39,6 +39,15 @@
     line-height:70px;
     margin-left: 100px;
 }
+.Lable_titletext_yspz {
+    font-size: 20px;
+    font-family: 'Microsoft YaHei';
+    font-weight: 300;
+    text-align: left;
+    line-height: 70px;
+    margin-right:-20px;
+    margin-left: 30px;
+}
 .btncss_xq_black {
     color: #ffffff;
     border: none;
