@@ -46,7 +46,7 @@
                                         </a>
                                         <br />
                                         <br />
-                                <asp:Label ID="Label1" CssClass="Lable_zw" Text="双脚离地了，病毒就关闭了，聪明的智商又占领高地了，123双脚离地了，病毒就关闭了，聪明的智商又占领高地了" runat="server" />                        
+                                <asp:Label ID="Label1_peizhixinxi" CssClass="Lable_zw" Text="双脚离地了，病毒就关闭了，聪明的智商又占领高地了，123双脚离地了，病毒就关闭了，聪明的智商又占领高地了" runat="server" />                        
                                     </div>
                                 </td>
                             </tr>
@@ -58,36 +58,57 @@
                             <asp:Label ID="Label3" CssClass="Lable_pp" Text="手机品牌自动适应长度" runat="server" />
                         </a>
                         <br />
-                        <asp:Label ID="Label2" CssClass="Lable_zw" Text="双脚离地了，病毒就关闭了，聪明的智商又占领高地了，123" runat="server" />
+                        <asp:Label ID="Label2_jieshao" CssClass="Lable_zw" Text="双脚离地了，病毒就关闭了，聪明的智商又占领高地了，123" runat="server" />
                       <br />
                         <br />
-                       <asp:ListView  runat="server" >
-
-                       </asp:ListView>
+                        <h3>颜色</h3>
                         <div id="buttonlist" class="list-group">
                             <% foreach (string ttt in mulist2)
                                 {%>
-                           <button id="gsf" type="button"  class="list-group-item"  onclick="tsts('<%=ttt%>')"   ><%=ttt%></button>                      
+                           <button id="gsf" type="button"  class="list-group-item"  onclick="tsts('<%=ttt%>')"  ><%=ttt%></button>                      
                             <%} %>
                             <script type="text/javascript">
-                                function tsts(str) {
-                                    document.getElementById('Label7').innerHTML = str;
+                                var color_seleted;
+                                /**
+                                 *       function tsts(str) {
+                                    document.getElementById('Label7').innerHTML = str;//底部显示选择的颜色
+                                    color_seleted = str;
                                     var tts = encodeURI(str);
                                     var ajx = new XMLHttpRequest();
-                                    ajx.open("get", "XiangQingpage.aspx?test=" + tts, true);
+                                    ajx.open("get", "XiangQingpage.aspx?pcolor=" + tts, true);
                                     ajx.send();
-                                }                    
+                                }
+                                 * @param str
+                                 */
+                                function tsts(str) {
+                                    document.getElementById('Label7').innerHTML = str;//底部显示选择的颜色
+                                    document.getElementById('Label5').innerHTML = "";//清空选择暗示重新选择，ajax操作是在选择配置的时候
+                                    color_seleted = encodeURI(str);                   
+                                }             
+                                function pzset(str) {
+                                    document.getElementById('Label5').innerHTML = str;//底部显示选择的配置
+                                    var tts = encodeURI(str);
+                                    var ajx = new XMLHttpRequest();
+                                    ajx.open("get", "XiangQingpage.aspx?peizhi=" + tts + "&pcolor=" + color_seleted, true); //不知道要不要带上颜色，不过颜色后台有存
+                                    ajx.send();
+                                }
                             </script>                   
                         </div>                     
                         <br />
-                      
+                       <h3>规格</h3>
+                        <div id="buttonlist2" class="list-group">
+                            <% foreach (string ppp in peizhi_list)
+                                {%>
+                           <button  type="button"  class="list-group-item"  onclick="pzset('<%=ppp%>')"  ><%=ppp%></button>                      
+                            <%} %>              
+                        </div>              
                    
                         </div>
                 </div>      
             <div style="height:70px;background-color:#f3f3f3;position:fixed;bottom:0px;width:100%">            
                 <asp:Label ID="Label6" CssClass="Lable_titletext2" Text="手机名字" runat="server" />
                 <label id="Label7" class="Lable_titletext_yspz" ></label>
-                <asp:Label ID="Label5" CssClass="Lable_titletext_yspz" Text="选择的配置" runat="server" />
+                <label id="Label5" class="Lable_titletext_yspz" ></label>
                 <div style="width:auto;height:100%;padding:15px 20px 0 20px;background-color:#f3f3f3;float:right">
                        <asp:Button Text="添加到购物车"  runat="server"   class="btncss_xq_black" />
                       <asp:Button Text="一键购买"  BackColor="#ff3535" runat="server"   class="btncss_xq_black" />

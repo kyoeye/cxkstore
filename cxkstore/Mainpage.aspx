@@ -49,7 +49,7 @@
                             <td>小米</td>
                             <td>华为</td>
                             <td>一加</td>
-                            <td>锤子</td>
+                            <td>坚果</td>
                         </tr>
                         <tr>
                             <td>oppo</td>

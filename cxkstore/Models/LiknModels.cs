@@ -18,5 +18,11 @@ namespace cxkstore.Models
         public string pjieshao { get; set; }
         public string pchengben { get; set; }
         public string pkucun { get; set; }
+        public string pcolor { get; set; }
+        public string ppeizhi { get; set; }
+        public string phonebrand { get; set; }//品牌
+        public string phonetext { get; set; }//品牌介绍
+
+
     }
 }

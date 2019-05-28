@@ -39,7 +39,7 @@ namespace cxkstore
                 SqlCommand sqlc = sc.CreateCommand();
                 sc.Open();
                 sqlc.CommandText = string.Format("Select* from Phonexinxi where phonename like N'%{0}%'",searchcount);
-                //Select* from Phonexinxi where phonename like N'%OPPO%' 模糊查询                    
+                //Select* from Phonexinxi where phonename like N'%OPPO%' 模糊查询           
                 using (SqlDataReader reader = sqlc.ExecuteReader())
                 {
                     while (reader.Read())
@@ -47,13 +47,15 @@ namespace cxkstore
                         Tostlable.Visible = false;
                         phonexinxis.Add(new PhoneXinxi {
                             phonenum = reader["phonenum"].ToString(),
-                            phoneid =reader["phoneid"].ToString(),
-                            phonename =reader["phonename"].ToString(),
+                            phoneid = reader["phoneid"].ToString(),
+                            phonename = reader["phonename"].ToString(),
                             price = reader["phoneprice"].ToString(),
                             pjieshao = reader["pjieshao"].ToString(),
                             pchengben = reader["pchengben"].ToString(),
-                            pkucun= reader["pkucun"].ToString(),
-                        });    
+                            pkucun = reader["pkucun"].ToString(),
+                            pcolor = reader["pcolor"].ToString(),
+                            ppeizhi = reader["ppeizhi"].ToString()
+                    });    
                     }
                     if (reader.HasRows == false)
                     {
@@ -78,7 +80,7 @@ namespace cxkstore
                 control.jieShao = phonexinxis[i].pjieshao;
                 control.jiaGe = phonexinxis[i].price;//价格
            //     control.imgUrl = "../images/OPPO/OPPOreno%20(1).jpg";
-                 control.imgUrl = "../images/OPPO/" + phonexinxis[i].phonename + "%20(1).jpg";
+                 control.imgUrl = "../images/OPPO/" + phonexinxis[i].phonename + "%20(1).jpg";//拼接图片地址
                 Ul1.Controls.Add(control);
 
             }

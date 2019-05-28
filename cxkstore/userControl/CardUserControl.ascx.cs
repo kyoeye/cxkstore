@@ -21,7 +21,9 @@ namespace cxkstore.userControl
             JiageLable.Text = "¥ " + jiaGe+"起";
             try
             {
-                jump = "test2.aspx?phonename=" + cardTitle;
+            //    jump = "test2.aspx?phonename=" + cardTitle; //测试页
+                jump = "XiangQingpage.aspx?phonename=" + cardTitle;
+
             }
             catch
             {
