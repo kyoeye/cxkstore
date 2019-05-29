@@ -7,63 +7,45 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace cxkstore {
+namespace cxkstore.userControl {
     
     
-    public partial class Testpage {
+    public partial class GWcardUserControl {
         
         /// <summary>
-        /// test222 控件。
+        /// img3 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label test222;
+        protected global::System.Web.UI.HtmlControls.HtmlImage img3;
         
         /// <summary>
-        /// fukul 控件。
+        /// TitleLable 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl fukul;
+        protected global::System.Web.UI.WebControls.Label TitleLable;
         
         /// <summary>
-        /// mytestcontrol 控件。
+        /// jieshao 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::cxkstore.userControl.mytestcontrol mytestcontrol;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl jieshao;
         
         /// <summary>
-        /// Ul1 控件。
+        /// JiageLable 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Ul1;
-        
-        /// <summary>
-        /// cardcontrol 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::cxkstore.userControl.CardUserControl cardcontrol;
-        
-        /// <summary>
-        /// GWcardUserControl 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::cxkstore.userControl.GWcardUserControl GWcardUserControl;
+        protected global::System.Web.UI.WebControls.Label JiageLable;
     }
 }
