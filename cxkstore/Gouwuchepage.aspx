@@ -15,6 +15,7 @@
          <br />
          <br />
          <h1 style="margin-top:50px; font-size:40px;font-family:'Microsoft YaHei';font-weight:600; margin-left: 10px; margin-right: 10px; margin-bottom: 10px;margin:auto">这是您购物车里的商品</h1>
+         <asp:Label ID="Lable_tost" Visible="false" Text="当前没有商品" Font-Size="25px" runat="server" />
          <br />
             <ul id="Ul1" style="padding-left:0"  runat="server" />    
          </div>

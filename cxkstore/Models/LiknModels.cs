@@ -25,4 +25,14 @@ namespace cxkstore.Models
 
 
     }
+    public class GwcXinxi
+    {
+        public int gwcid { get; set; } 
+        public int userid { get; set; }
+        public int phonenum { get; set; }
+        public int shuliang { get; set; }
+        public string zhuangtai { get; set; }
+        public string  ddcolor { get; set; }
+        public string  ddpeizhi { get; set; }
+    }
 }

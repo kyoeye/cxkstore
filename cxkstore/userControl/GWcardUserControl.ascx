@@ -36,8 +36,8 @@
         <tr>
             <td>
                 <ul class="pager" style="color: #3e3e3e; margin-left: -40px; margin-top:0;padding-top:0;width: 300px">
-                    <li><a>坤坤绿</a></li>
-                    <li><a>8G+128GB</a></li>
+                    <li><a runat="server" id="a_color">坤坤绿</a></li>
+                    <li><a runat="server" id="a_pz">8G+128GB</a></li>
                 </ul>
             </td>
             <td>
