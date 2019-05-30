@@ -131,7 +131,7 @@ namespace cxkstore
                 sc.Open();
                 sqlc.CommandText = comtext;
                 int m = sqlc.ExecuteNonQuery();//获取响应行数
-                if (m != 0) { Response.Redirect("Testpage.aspx"); }
+                if (m != 0) { }
             }
         }
 

@@ -83,7 +83,7 @@
                                  */
                                 function tsts(str) {
                                     document.getElementById('Label7').innerHTML = str;//底部显示选择的颜色
-                                    document.getElementById('Label5').innerHTML = "";//清空选择暗示重新选择，ajax操作是在选择配置的时候
+                                    document.getElementById('Label5').innerHTML = "";//清空选择暗示重新选择，ajax操作在下面
                                     color_seleted = encodeURI(str);                   
                                 }             
                                 function pzset(str) {

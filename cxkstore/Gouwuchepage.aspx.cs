@@ -14,7 +14,7 @@ namespace cxkstore
     {
          protected string cxkdb = System.Configuration.ConfigurationManager.ConnectionStrings["CXKdbConnectionString"].ConnectionString; //数据库连接字串
         private string ct_addcontent, ct_rmcontent;
-        private  string Ct_rmcontentt { get { return ct_rmcontent; } set { ct_rmcontent = value; } }
+
         private string Ct_chaxungwc;
    //     public string Ct_addcontent { get { return ct_addcontent; } set { value = string.Format("insert into GWCtable(userid,phonenum,shuliang,zhuangtai,ddcolor,ddpeizhi) values({0},{1},{2},{3},N'{4}',N'{5}')", uid, pnm, sl, zt, ddc, ddp); } }
 
@@ -25,16 +25,25 @@ namespace cxkstore
             //select * from GWCtable,Phonexinxi where GWCtable.phonenum=Phonexinxi.phonenum and userid='1019'
             try
             {
-                uid = HttpUtility.UrlDecode(Request.Cookies["uid"].Value);//通过id来获取当前用户的购物车
-                Ct_chaxungwc = string.Format("select * from GWCtable,Phonexinxi where GWCtable.phonenum=Phonexinxi.phonenum and userid='{0}'", uid);
-                GetdbContent(Ct_chaxungwc, "cx");
-                ShowCard();
+                if (Request.QueryString["gwcdelete"]!=null ){
+                    var a = Request.QueryString["gwcdelete"];
+                    ct_rmcontent =  string.Format("delete from GWCtable where gwcid='{0}'",a);
+                    GetdbContent(ct_rmcontent, "delete");
+                  //要弄刷新页面
+                }
+                else
+                {
+                    uid = HttpUtility.UrlDecode(Request.Cookies["uid"].Value);//通过id来获取当前用户的购物车
+                    Ct_chaxungwc = string.Format("select * from GWCtable,Phonexinxi where GWCtable.phonenum=Phonexinxi.phonenum and userid='{0}'", uid);
+                    GetdbContent(Ct_chaxungwc, "cx");
+                    ShowCard();
+                }
             }
             catch
             {
                 Lable_tost.Visible = true;
             }
-  
+            
 
 
         }
@@ -48,7 +57,7 @@ namespace cxkstore
         /// <summary>
         /// 现在变得能够重用了（大概）
         /// </summary>
-        /// <param name="comtext">连接字串发送</param>
+        /// <param name="comtext"查询字串发送</param>
         ///<param name="dowhat" >调用gdc要做啥</param>
         protected void GetdbContent(string comtext,string dowhat)
         {
@@ -57,7 +66,6 @@ namespace cxkstore
                 SqlCommand sqlc = sc.CreateCommand();
                 sc.Open();
                 sqlc.CommandText = comtext;
-             //   int m = sqlc.ExecuteNonQuery();//获取响应行数
                 if(dowhat=="cx")
                 {
                     using (SqlDataReader reader = sqlc.ExecuteReader())
@@ -88,7 +96,15 @@ namespace cxkstore
                         }
                     }
                 }
+                else if (dowhat == "delete")
+                {
 
+                         if( sqlc.ExecuteNonQuery()!=0)//获取响应行数
+                        this.Page.ClientScript.RegisterStartupScript(this.Page.GetType(), "", "<script language='javascript'>alert(\"删除成功啦￣▽\");</script>", false);
+
+                   
+
+                }
             }
         }
 
@@ -111,6 +127,7 @@ namespace cxkstore
                 control.GW_jiage = gwcxinxis[i].price;//价格                                                   //     control.imgUrl = "../images/OPPO/OPPOreno%20(1).jpg";
                 control.GW_color = gwcxinxis[i].ddcolor;
                 control.GW_peizhi = gwcxinxis[i].ddpeizhi;
+                control.GW_gwcid = gwcxinxis[i].gwcid.ToString();
                 control.GW_sl = gwcxinxis[i].shuliang.ToString();
                 control.GW_imgUrl = "../images/" + gwcxinxis[i].phonename + "%20(1).jpg";//拼接图片地址
                 Ul1.Controls.Add(control);

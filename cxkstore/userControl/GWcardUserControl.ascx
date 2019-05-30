@@ -19,19 +19,29 @@
             <td style="width:400px">
                 <div style="float: left; text-align: left">
                     <asp:Label ID="TitleLable" CssClass="title" Text="标题-产品名" runat="server" />
+                    <label id="label_gwcid"    style="margin-left:10px;font-family:'Microsoft YaHei'" ><%=GW_gwcid%></label>
                     <p id="jieshao" runat="server" style="width: 422px; height: 66px; text-align: left; text-overflow: ellipsis;padding-top:20px">介绍介绍介绍绍介绍介绍绍介绍介绍绍介绍介绍绍介绍介绍</p>
                 </div>
             </td>
             <td>
-
+                <script type="text/javascript">
+                    function deletegwc() {
+                                      var i =  <%=GW_gwcid%>;
+                                      var ajx = new XMLHttpRequest();
+                                      ajx.open("get", "Gouwuchepage.aspx?gwcdelete=" + i , true); 
+                                      ajx.send();
+                                      alert("ajax执行成功啦(￣▽￣)"+i);
+                                }
+                </script>
                 <div  style="text-align:center">
-                    <div style="width:auto;float:right" >
-                        <button type="button" class="btncss_m_black" style="width:50px;height:30px;float:left "> - </button>      
+                    <div style="width:auto;float:right" >                   
+                        <button type="button" onclick="deletegwc()" class="btncss_m_black" style="width:50px;height:30px;float:right;margin-top:100px;"> 删除 </button>
+                        <button type="button" class="btncss_m_black" style="width:50px;height:30px;float:left"> - </button>
                          <label  id="label_sl" runat="server" class="jiage" style="font-size:20px; width:50px;float:left;text-align:center;line-height:30px">1</label>
+                        <button type="button" class="btncss_m_black" style="width:50px;height:30px;float:left "> + </button>      
                    <!--     <input   type="text" class="form-control" placeholder="1" style="text-align: center;width:50px; height: 30px;float:left">     -->
-                        <button type="button" class="btncss_m_black" style="width:50px;height:30px;float:left"> + </button>
                     </div>
-                        <button type="button" class="btncss_m_black" style="width:50px;height:30px;float:right"> 删除 </button>
+                 
                 </div>
             </td>
         </tr>
@@ -50,12 +60,7 @@
             </td>
         </tr>
     </table>
-
     </div>
- 
-
-
-        <!--<asp:Label ID="JiageLable" CssClass="jiage" Text="2333元"  runat="server" />-->
 
 </div>
 <br />
