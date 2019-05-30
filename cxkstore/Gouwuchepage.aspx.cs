@@ -23,14 +23,18 @@ namespace cxkstore
         {
             //  Ct_rmcontentt=string.Format("delete from GWCtable where gwcid={0}')", gid); 
             //select * from GWCtable,Phonexinxi where GWCtable.phonenum=Phonexinxi.phonenum and userid='1019'
-    
-            uid = HttpUtility.UrlDecode(Request.Cookies["uid"].Value);//通过id来获取当前用户的购物车
-            if(uid!=null )
+            try
             {
-                Ct_chaxungwc = string.Format("select * from GWCtable,Phonexinxi where GWCtable.phonenum=Phonexinxi.phonenum and userid='{0}'",uid);
+                uid = HttpUtility.UrlDecode(Request.Cookies["uid"].Value);//通过id来获取当前用户的购物车
+                Ct_chaxungwc = string.Format("select * from GWCtable,Phonexinxi where GWCtable.phonenum=Phonexinxi.phonenum and userid='{0}'", uid);
                 GetdbContent(Ct_chaxungwc, "cx");
-
+                ShowCard();
             }
+            catch
+            {
+                Lable_tost.Visible = true;
+            }
+  
 
 
         }
@@ -59,16 +63,19 @@ namespace cxkstore
                     using (SqlDataReader reader = sqlc.ExecuteReader())
                     {
                         while (reader.Read())
-                        {            
+                        {
                             gwcxinxis.Add(new GwcXinxi
                             {
                                 gwcid = int.Parse(reader["gwcid"].ToString()),
                                 userid = int.Parse(reader["userid"].ToString()),
                                 phonenum = int.Parse(reader["phonenum"].ToString()),
-                                shuliang = int.Parse( reader["shuliang"].ToString()), //数量可能不做了，或者执行一个查询语句更改是数量
-                                zhuangtai  = reader["zhuangtai"].ToString(),
-                                ddcolor = reader["pjieshao"].ToString(),
-                                ddpeizhi = reader["pchengben"].ToString(),
+                                shuliang = int.Parse(reader["shuliang"].ToString()), //数量可能不做了，或者执行一个查询语句更改是数量
+                                zhuangtai = reader["zhuangtai"].ToString(),
+                                ddcolor = reader["ddcolor"].ToString(),
+                                ddpeizhi = reader["ddpeizhi"].ToString(),
+                                phonename = reader["phonename"].ToString(),
+                                pjieshao = reader["pjieshao"].ToString(),
+                                price = reader["phoneprice"].ToString()
                             });
                         }
                         if (reader.HasRows == false)
@@ -99,11 +106,13 @@ namespace cxkstore
             for (int i = 0; i < gwcxinxis.Count; i++)
             {
                GWcardUserControl control = (GWcardUserControl)Page.LoadControl("~/userControl/GWcardUserControl.ascx");
-                control.cardTitle = phonexinxis[i].phonename;
-                control.jieShao = phonexinxis[i].pjieshao;
-                control.jiaGe = phonexinxis[i].price;//价格
-                                                     //     control.imgUrl = "../images/OPPO/OPPOreno%20(1).jpg";
-                control.imgUrl = "../images/OPPO/" + phonexinxis[i].phonename + "%20(1).jpg";//拼接图片地址
+                control.GW_cardTitle = gwcxinxis[i].phonename;
+                control.GW_jieShao = gwcxinxis[i].pjieshao;
+                control.GW_jiage = gwcxinxis[i].price;//价格                                                   //     control.imgUrl = "../images/OPPO/OPPOreno%20(1).jpg";
+                control.GW_color = gwcxinxis[i].ddcolor;
+                control.GW_peizhi = gwcxinxis[i].ddpeizhi;
+                control.GW_sl = gwcxinxis[i].shuliang.ToString();
+                control.GW_imgUrl = "../images/" + gwcxinxis[i].phonename + "%20(1).jpg";//拼接图片地址
                 Ul1.Controls.Add(control);
             }
         }

@@ -40,6 +40,15 @@ namespace cxkstore.userControl {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl jieshao;
         
         /// <summary>
+        /// label_sl 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl label_sl;
+        
+        /// <summary>
         /// a_color 控件。
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace cxkstore.userControl {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor a_pz;
+        
+        /// <summary>
+        /// JiageLable2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl JiageLable2;
         
         /// <summary>
         /// JiageLable 控件。

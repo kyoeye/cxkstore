@@ -99,7 +99,8 @@
                                       var pn = encodeURI(confirmPrice);
                                       var ajx = new XMLHttpRequest();
                                       ajx.open("get", "XiangQingpage.aspx?peizhi=" + peizhi_seleted + "&gettogwc=" + tts + "&pname=" + pn + "&pcolor=" + color_seleted, true); //带上配置吧。。pageload里有个判断……会把ajax刷新掉
-                                    ajx.send();
+                                      ajx.send();
+                                      alert("添加到购物车成功啦(￣▽￣)");
                                 }
                               
                             </script>                   
@@ -121,7 +122,7 @@
                 <label id="Label7" class="Lable_titletext_yspz" ></label>
                 <label id="Label5" class="Lable_titletext_yspz" ></label>
                 <div style="width:auto;height:100%;padding:15px 20px 0 20px;background-color:#f3f3f3;float:right">
-                       <button id="addtobag_btn"  type="button"   onclick="addtobag()"  class="btncss_xq_black" >添加到购物车</button>
+                       <button id="addtobag_btn"   type="button"   onclick="addtobag()"  class="btncss_xq_black" >添加到购物车</button>
                       <asp:Button Text="一键购买"  BackColor="#ff3535" runat="server"   class="btncss_xq_black" />
                 </div>
             </div>
