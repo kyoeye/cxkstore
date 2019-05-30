@@ -69,6 +69,7 @@
                             <%} %>
                             <script type="text/javascript">
                                 var color_seleted;
+                                var peizhi_seleted;
                                 /**
                                  *       function tsts(str) {
                                     document.getElementById('Label7').innerHTML = str;//底部显示选择的颜色
@@ -87,11 +88,20 @@
                                 }             
                                 function pzset(str) {
                                     document.getElementById('Label5').innerHTML = str;//底部显示选择的配置
-                                    var tts = encodeURI(str);
+                                   peizhi_seleted = encodeURI(str);
                                     var ajx = new XMLHttpRequest();
-                                    ajx.open("get", "XiangQingpage.aspx?peizhi=" + tts + "&pcolor=" + color_seleted, true); //不知道要不要带上颜色，不过颜色后台有存
+                                    ajx.open("get", "XiangQingpage.aspx?peizhi=" + peizhi_seleted + "&pcolor=" + color_seleted, true); //不知道要不要带上颜色，不过颜色后台有存
                                     ajx.send();
                                 }
+                                  function addtobag() {
+                                      var tts = encodeURI("true");
+                                      var confirmPrice = document.getElementById("Label1").innerText;
+                                      var pn = encodeURI(confirmPrice);
+                                      var ajx = new XMLHttpRequest();
+                                      ajx.open("get", "XiangQingpage.aspx?peizhi=" + peizhi_seleted + "&gettogwc=" + tts + "&pname=" + pn + "&pcolor=" + color_seleted, true); //带上配置吧。。pageload里有个判断……会把ajax刷新掉
+                                    ajx.send();
+                                }
+                              
                             </script>                   
                         </div>                     
                         <br />
@@ -106,11 +116,12 @@
                         </div>
                 </div>      
             <div style="height:70px;background-color:#f3f3f3;position:fixed;bottom:0px;width:100%">            
-                <asp:Label ID="Label6" CssClass="Lable_titletext2" Text="手机名字" runat="server" />
+                <label id="Label1"  class="Lable_titletext2"><%=pname%></label>               
+                <asp:Label ID="Label6" Visible="false" CssClass="Lable_titletext2" Text="手机名字" runat="server" />
                 <label id="Label7" class="Lable_titletext_yspz" ></label>
                 <label id="Label5" class="Lable_titletext_yspz" ></label>
                 <div style="width:auto;height:100%;padding:15px 20px 0 20px;background-color:#f3f3f3;float:right">
-                       <asp:Button Text="添加到购物车"  runat="server"   class="btncss_xq_black" />
+                       <button id="addtobag_btn"  type="button"   onclick="addtobag()"  class="btncss_xq_black" >添加到购物车</button>
                       <asp:Button Text="一键购买"  BackColor="#ff3535" runat="server"   class="btncss_xq_black" />
                 </div>
             </div>

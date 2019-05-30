@@ -14,17 +14,19 @@ namespace cxkstore
     {
 
         string cxkdb = System.Configuration.ConfigurationManager.ConnectionStrings["CXKdbConnectionString"].ConnectionString; //数据库连接字串
-        public string selectcolor { get; set; }//当前选择的手机颜色  /我也不知道我为啥要用访问器
-        public string selectpeizhi { get; set; }//当前选择的配置
+        private string uid, pnm, sl, zt = "0", ddc, ddp;
+        private string ct_addcontent;
+        public string Ct_addcontent { get { return ct_addcontent; } set { ct_addcontent= value; } }
+        public string selectcolor;//当前选择的手机颜色 
+        public string selectpeizhi;//当前选择的配置
         public string pname;
         //目前需要一个正则提取数据库返回的颜色 以空格区分
         public IList<string> mulist2 = new List<string>();
         public IList<string> peizhi_list = new List<string>();
         List<PhoneXinxi> phonexinxis = new List<PhoneXinxi> { };
-        protected void Page_Load(object sender, EventArgs e)
+    protected void Page_Load(object sender, EventArgs e)
         {
             //  imgg. = "../images/OPPO/" + phonexinxis[i].phonename + "%20(1).jpg";
-            // test2();
             var testtest = Request.QueryString["peizhi"];  //尝试获取ajax传过来的数据//竟然自动转换了UrlEncode        
             if (testtest != null)
             {
@@ -32,7 +34,7 @@ namespace cxkstore
                 selectpeizhi = testtest;
             }
             else
-            {
+            {               
                 pname = Request.QueryString["phonename"];
                 if (pname == null)
                 {
@@ -41,6 +43,24 @@ namespace cxkstore
                 GetdbContent();
                 Setwebcontent();
             }
+            try
+            {
+                uid = HttpUtility.UrlDecode(Request.Cookies["uid"].Value);
+            }
+            catch
+            {
+            //    Response.Redirect("UserLogin.aspx");
+            }
+            var g = Request.QueryString["gettogwc"];  //ajax传过来的添加到购物车  //昨晚留：可以执行了，但是phonexinxis被刷新掉了信息全没了……
+            if (g!=null)
+            {
+                pname = Request.QueryString["pname"];
+                selectcolor = Request.QueryString["pcolor"];
+                selectpeizhi = testtest;
+                GetdbContent();//list会丢据……再访问一次数据库……
+                addtobag_btn_Click();
+            }
+
         }
 
         /// <summary>
@@ -53,16 +73,14 @@ namespace cxkstore
             Label6.Text = phonexinxis[0].phonename;//底部购买的手机名字
             Label2_jieshao.Text = phonexinxis[0].phonetext;//这个可能不是介绍配置，没想好
             Label1_peizhixinxi.Text = phonexinxis[0].pjieshao;
-            Label3.Text = phonexinxis[0].phonebrand;
-           
+            Label3.Text = phonexinxis[0].phonebrand;           
         }
-
-
         #region 数据获取
         /// <summary>
         /// 访问数据库
         /// 获取搜索传过来的手机名字，查询数据库，也要查询品牌信息表;
         /// 购物车可能不在这，一键购买跳转订单生成不用在这做。
+        /// 5.29加了个重载的访问数据库的方法，它更吊点
         /// </summary>
         public void GetdbContent()
         {
@@ -90,14 +108,14 @@ namespace cxkstore
                             phonebrand = reader["phonebrand"].ToString(),
                             phonetext = reader["phonetext"].ToString(),
                         });
+                       
                     }
                 }
-
-            
                 try
                 {
                     GetPhoneColor(phonexinxis[0].pcolor); //这里报错十有八九是phonename为空，懒得管跳回搜索页
                     GetPhonepz(phonexinxis[0].ppeizhi);//获取配置
+                    sc.Close();
                 }
                 catch
                 {
@@ -105,6 +123,18 @@ namespace cxkstore
                 }
             }
         }
+        protected void GetdbContent(string comtext)
+        {
+            using (SqlConnection sc = new SqlConnection(cxkdb))
+            {
+                SqlCommand sqlc = sc.CreateCommand();
+                sc.Open();
+                sqlc.CommandText = comtext;
+                int m = sqlc.ExecuteNonQuery();//获取响应行数
+                if (m != 0) { Response.Redirect("Testpage.aspx"); }
+            }
+        }
+
         /// <summary>
         /// 提取颜色 空格区分 用mulist2来存就很不错_(:з)∠)_
         /// </summary>
@@ -128,6 +158,18 @@ namespace cxkstore
                 peizhi_list.Add(s[i]);
             }
         }
+
+        /// <summary>
+        /// 变量赋值给购物车的查询字串里的变量用
+        /// </summary>
+        public void Setgwcbl()
+        {
+            pnm = phonexinxis[0].phonenum;
+            sl = "1";
+            ddc = selectcolor;
+            ddp = selectpeizhi;
+        }
+
         #endregion
         #region 测试用   
         public void test2()
@@ -141,5 +183,12 @@ namespace cxkstore
             Label3.Text = ts;
         }
         #endregion
+        //还是要用ajax，这个clik会刷新造成丢失
+        protected void addtobag_btn_Click()
+        {
+            Setgwcbl();
+            Ct_addcontent = string.Format("insert into GWCtable(userid,phonenum,shuliang,zhuangtai,ddcolor,ddpeizhi) values({0},{1},{2},{3},N'{4}',N'{5}')", uid, pnm, sl, zt, ddc, ddp);
+            GetdbContent(Ct_addcontent);
+        }
     }
 }
