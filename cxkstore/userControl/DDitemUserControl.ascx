@@ -9,7 +9,7 @@
     }
 </style>
 <br />
-<div id="click_div" style="width: 1000px; height: 60px; margin-top:10px; margin-bottom:10px; background-color: #f1f1f1; color: #1d1d1d; margin: auto; border-radius: 5px; overflow: hidden;border:2px solid #3e3e3e" >      
+<div id="click_div" style="width: 1000px; height: 60px;  background-color: #f5f5f5; color: #1d1d1d; margin: auto; border-radius: 5px; overflow: hidden;border:1px solid #3e3e3e" >      
     <table>
         <tr>
             <td style="line-height:60px;width:850px">
@@ -23,6 +23,5 @@
             </td>
         </tr>
     </table>
-
 </div>     
 <br />
