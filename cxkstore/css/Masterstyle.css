@@ -39,11 +39,14 @@
 
 .img_m {
     margin: 0 auto;
+  
+
 }
 
 .logo_m {
     margin: 0 auto;
-    padding: 5px;
+    height:30px;
+    line-height:40px;
 }
 
 .a_m {

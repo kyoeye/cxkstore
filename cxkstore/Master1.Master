@@ -15,20 +15,26 @@
     <form id="form1" runat="server">
        
             <div style="background-color:#333333;color:white;padding:0px;height:40px;text-align:center">
-              <a href="Mainpage.aspx"  style="float:left;height:40px;width:40px;margin:0 auto;">
-                  <asp:Image Height="25px"  CssClass="img_m"  ImageUrl="~/images/icon/lanqiu.png" runat="server" />
+              <a href="Guanlilogin.aspx"  style="float:left;height:40px;width:40px;margin:0 auto;">
+                  <asp:Image Height="30px"  CssClass="logo_m" ImageUrl="~/images/icon/lanqiu.png" runat="server" />
               </a>
+                <a href="Mainpage.aspx"  style="float:left;height:40px;width:90px;margin:0 auto;">
+                    <label style="font-family:HYHeiFang;line-height:40px;font-size:20px;color:white">机你太美</label>
+                </a>
                 <div style="float:right;padding:0px;text-align:center">
                     <asp:Button Text="亲，请登录！" ID="tologin"  runat="server"    OnClick="tologin_Click"    class="btncss_m_black" />
                     <asp:LinkButton ID="lnkbtnLogout" runat="server" Visible="false" OnClick="lnkbtnLogout_Click">退出登录</asp:LinkButton>
                      <a  href="~/Searchpage.aspx" class="a_m" runat="server">
                         <asp:Image  Height="18px" CssClass="img_m"  ImageUrl="~/images/icon/sousuo.png"  runat="server"/>
                     </a>
-                      <asp:Button Text="订单"  runat="server"  class="btncss_m_black" />
+                      <a  href="~/DDpage.aspx" class="a_m" runat="server">
+                        <asp:Image  Height="18px" CssClass="img_m"  ImageUrl="~/images/icon/dingdan.png" runat="server"/>
+                    </a>
+                   <!--   <asp:Button Text="订单"  runat="server"  class="btncss_m_black" />-->
                       <a  class="a_m" href="~/Gouwuchepage.aspx" runat="server">
                         <asp:Image  Height="18px" CssClass="img_m"  ImageUrl="~/images/icon/gouwuchekong.png"  runat="server"/>
                     </a>
-                    <asp:Button Text="管理员"  runat="server" ID="guanlibtn"  OnClick="guanlibtn_Click"  class="btncss_m_black" />
+              <asp:Button Text="管理员"  runat="server" ID="guanlibtn"  OnClick="guanlibtn_Click"  class="btncss_m_black" />
                 </div>
             </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

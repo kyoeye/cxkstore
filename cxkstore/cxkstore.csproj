@@ -87,6 +87,7 @@
     <Content Include="Gouwuchepage.aspx" />
     <Content Include="Guanlilogin.aspx" />
     <Content Include="GWCpage.aspx" />
+    <Content Include="images\icon\dingdan.png" />
     <Content Include="images\icon\gouwuchekong.png" />
     <Content Include="images\icon\lanqiu.png" />
     <Content Include="images\icon\sousuo.png" />
