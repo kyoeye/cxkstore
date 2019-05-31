@@ -51,5 +51,10 @@ namespace cxkstore
         {
             Response.Redirect("UserLogin.aspx");
         }
+
+        protected void guanlibtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Guanlilogin.aspx");
+        }
     }
 }
