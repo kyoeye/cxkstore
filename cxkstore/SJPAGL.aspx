@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SJPAGL.aspx.cs" Inherits="cxkstore.Properties.SJPAGL" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SJPAGL.aspx.cs" Inherits="cxkstore.SJPAGL" %>
 
 <!DOCTYPE html>
 
@@ -106,8 +106,16 @@
             </div>
              <br />
             <br />
-    
+            <asp:Button ID="Button2" runat="server" Text="供应商管理" Height="45px" Width="121px" BackColor="#3399ff" OnClick="Button2_Click"  />
+            <br />
+
+            <asp:Button ID="Button3" runat="server" Text="手机信息管理" Height="45px" Width="121px" BackColor="#3333ff" OnClick="Button3_Click"  />
+            <br />
+            <asp:Button ID="Button4" runat="server" Text="订单管理" Height="45px" Width="121px" BackColor="#3399ff" OnClick="Button4_Click" />
+            <br />
+            <asp:Button ID="Button5" runat="server" Text="返回" Height="45px" Width="121px" BackColor="#3333ff" OnClick="Button5_Click" />
         </div>
     </form>
 </body>
 </html>
+

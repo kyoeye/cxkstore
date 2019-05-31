@@ -16,20 +16,6 @@ namespace cxkstore
         {
 
         }
-
-        protected void chkA11_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox chkA11 = (CheckBox)sender;
-            foreach (GridViewRow gvRow in gvProduct.Rows)
-            {
-                CheckBox chkItem = (CheckBox)gvRow.FindControl("chkItem");
-                chkItem.Checked = chkA11.Checked;
-
-
-            }
-        }
-
-
         protected void Button2_Click(object sender, EventArgs e)
         {
             string phoneName, pjieShao, pColor, ppeiZhi;
@@ -60,6 +46,25 @@ namespace cxkstore
                     Response.Redirect("SPGL.aspx");
                 }
             }
+        }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SJPAGL.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("DDGL.aspx");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("GYSGL.aspx");
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ZHUGL.aspx");
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace cxkstore.Properties
+namespace cxkstore
 {
     public partial class SJPAGL : System.Web.UI.Page
     {
@@ -17,7 +17,7 @@ namespace cxkstore.Properties
             string phoneBrand, phoneText;
             phoneBrand = phonebrand.Value;
             phoneText = phonetext.Value;
-           
+
             using (SqlConnection sc = new SqlConnection(cxkdb))
             {
                 SqlCommand sqlc = sc.CreateCommand();
@@ -31,6 +31,26 @@ namespace cxkstore.Properties
                     Response.Redirect("SJPAGL.aspx");
                 }
             }
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("GYSGL.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SPGL.aspx");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("DDGL.aspx");
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ZHUGL.aspx");
         }
     }
 }

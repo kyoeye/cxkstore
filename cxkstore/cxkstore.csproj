@@ -81,12 +81,14 @@
     <Content Include="css\Gwcardstyle.css" />
     <Content Include="css\Masterstyle.css" />
     <Content Include="css\XQstyle.css" />
+    <Content Include="DDGL.aspx" />
     <Content Include="DDpage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="GongyinS.aspx" />
     <Content Include="Gouwuchepage.aspx" />
     <Content Include="Guanlilogin.aspx" />
     <Content Include="GWCpage.aspx" />
+    <Content Include="GYSGL.aspx" />
     <Content Include="images\icon\dingdan.png" />
     <Content Include="images\icon\gouwuchekong.png" />
     <Content Include="images\icon\lanqiu.png" />
@@ -99,10 +101,8 @@
     <Content Include="images\u=945315310,1576619437&amp;fm=11&amp;gp=0.jpg" />
     <Content Include="images\mainpage\wp.jpg" />
     <Content Include="Mainpage.aspx" />
-    <Content Include="Properties\DDGL.aspx" />
-    <Content Include="Properties\GYSGL.aspx" />
-    <Content Include="Properties\SJPAGL.aspx" />
     <Content Include="Searchpage.aspx" />
+    <Content Include="SJPAGL.aspx" />
     <Content Include="SPGL.aspx" />
     <Content Include="test2.aspx" />
     <Content Include="Testpage.aspx" />
@@ -114,6 +114,7 @@
     <Content Include="Web.config" />
     <Content Include="XiangQingpage.aspx" />
     <Content Include="Zhucepage.aspx" />
+    <Content Include="ZHUGL.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cs\UserContext.cs" />
@@ -124,6 +125,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CXKdbml.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DDGL.aspx.cs">
+      <DependentUpon>DDGL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DDGL.aspx.designer.cs">
+      <DependentUpon>DDGL.aspx</DependentUpon>
     </Compile>
     <Compile Include="DDpage.aspx.cs">
       <DependentUpon>DDpage.aspx</DependentUpon>
@@ -163,6 +171,13 @@
     <Compile Include="GWCpage.aspx.designer.cs">
       <DependentUpon>GWCpage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GYSGL.aspx.cs">
+      <DependentUpon>GYSGL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GYSGL.aspx.designer.cs">
+      <DependentUpon>GYSGL.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mainpage.aspx.cs">
       <DependentUpon>Mainpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -179,33 +194,19 @@
     </Compile>
     <Compile Include="Models\LiknModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\DDGL.aspx.cs">
-      <DependentUpon>DDGL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Properties\DDGL.aspx.designer.cs">
-      <DependentUpon>DDGL.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\GYSGL.aspx.cs">
-      <DependentUpon>GYSGL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Properties\GYSGL.aspx.designer.cs">
-      <DependentUpon>GYSGL.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\SJPAGL.aspx.cs">
-      <DependentUpon>SJPAGL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Properties\SJPAGL.aspx.designer.cs">
-      <DependentUpon>SJPAGL.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Searchpage.aspx.cs">
       <DependentUpon>Searchpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Searchpage.aspx.designer.cs">
       <DependentUpon>Searchpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SJPAGL.aspx.cs">
+      <DependentUpon>SJPAGL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SJPAGL.aspx.designer.cs">
+      <DependentUpon>SJPAGL.aspx</DependentUpon>
     </Compile>
     <Compile Include="SPGL.aspx.cs">
       <DependentUpon>SPGL.aspx</DependentUpon>
@@ -276,6 +277,13 @@
     </Compile>
     <Compile Include="Zhucepage.aspx.designer.cs">
       <DependentUpon>Zhucepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZHUGL.aspx.cs">
+      <DependentUpon>ZHUGL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZHUGL.aspx.designer.cs">
+      <DependentUpon>ZHUGL.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

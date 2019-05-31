@@ -20,7 +20,7 @@ namespace cxkstore
         {
             if (TextBox1.Text == "17160406")
                 if (TextBox2.Text == "6888")
-                { Response.Redirect("UserLogin.aspx"); }
+                { Response.Redirect("ZHUGL.aspx"); }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
