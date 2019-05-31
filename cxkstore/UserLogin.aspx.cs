@@ -43,7 +43,8 @@ namespace cxkstore
                         if(reader["password"].ToString()== Password)
                         {
                              Response.Cookies["tt2"].Value = HttpUtility.UrlEncode(Name); //创建cookie，用urlencode编码解决中文乱码，读取的时候再转换回来就行
-                   //         Response.Cookies.Remove("tt2");
+                             Response.Cookies["uid"].Value = HttpUtility.UrlEncode(reader["userid"].ToString()); //创建cookie，用urlencode编码解决中文乱码，读取的时候再转换回来就行
+                            // Response.Cookies.Remove("tt2");
                             Response.Redirect("Mainpage.aspx");
                         }
                         else

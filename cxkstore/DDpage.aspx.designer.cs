@@ -7,72 +7,54 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace cxkstore.userControl {
+namespace cxkstore {
     
     
-    public partial class GWcardUserControl {
+    public partial class DDpage {
         
         /// <summary>
-        /// img3 控件。
+        /// Lable_ddid 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage img3;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Lable_ddid;
         
         /// <summary>
-        /// TitleLable 控件。
+        /// Ul3 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TitleLable;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Ul3;
         
         /// <summary>
-        /// jieshao 控件。
+        /// goumai_btn 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl jieshao;
+        protected global::System.Web.UI.WebControls.Button goumai_btn;
         
         /// <summary>
-        /// label_sl 控件。
+        /// Label1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl label_sl;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Label1;
         
         /// <summary>
-        /// a_color 控件。
+        /// Ul4 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor a_color;
-        
-        /// <summary>
-        /// a_pz 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor a_pz;
-        
-        /// <summary>
-        /// JiageLable2 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl JiageLable2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Ul4;
     }
 }

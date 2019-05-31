@@ -82,7 +82,6 @@ namespace cxkstore
            //     control.imgUrl = "../images/OPPO/OPPOreno%20(1).jpg";
                  control.imgUrl = "../images/OPPO/" + phonexinxis[i].phonename + "%20(1).jpg";//拼接图片地址
                 Ul1.Controls.Add(control);
-
             }
         }
         protected void gga_ServerClick(object sender, EventArgs e)

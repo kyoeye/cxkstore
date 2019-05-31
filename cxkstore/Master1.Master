@@ -26,7 +26,7 @@
                     </a>
                     <asp:Button Text="我的"  runat="server"   class="btncss_m_black" />
                       <asp:Button Text="订单"  runat="server"  class="btncss_m_black" />
-                      <a  class="a_m" runat="server">
+                      <a  class="a_m" href="~/Gouwuchepage.aspx" runat="server">
                         <asp:Image  Height="18px" CssClass="img_m"  ImageUrl="~/images/icon/gouwuchekong.png"  runat="server"/>
                     </a>
                 </div>

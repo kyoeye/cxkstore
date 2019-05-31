@@ -25,4 +25,31 @@ namespace cxkstore.Models
 
 
     }
+    public class GwcXinxi
+    {
+        public int gwcid { get; set; } 
+        public int userid { get; set; }
+        public int phonenum { get; set; }
+        public int shuliang { get; set; }
+        public string zhuangtai { get; set; }
+        public string  ddcolor { get; set; }
+        public string  ddpeizhi { get; set; }
+        public string phonename { get; set; }
+        public string pjieshao { get; set; }
+        public string price { get; set; }
+    }
+    public class DDXinxi
+    {
+        public int ddid { get; set; }
+        public int userid { get; set; }
+        public int phonenum { get; set; }
+        public int ddshuliang { get; set; }
+        public string phonename { get; set; }
+        public string ddtime { get; set; }
+        public double ddzjg { get; set; }
+        public string ddcolor { get; set; }
+        public string ddpeizhi { get; set; }
+        public string ddzhuangtai { get; set; }
+
+    }
 }

@@ -69,28 +69,50 @@
                             <%} %>
                             <script type="text/javascript">
                                 var color_seleted;
-                                /**
-                                 *       function tsts(str) {
-                                    document.getElementById('Label7').innerHTML = str;//底部显示选择的颜色
-                                    color_seleted = str;
-                                    var tts = encodeURI(str);
-                                    var ajx = new XMLHttpRequest();
-                                    ajx.open("get", "XiangQingpage.aspx?pcolor=" + tts, true);
-                                    ajx.send();
-                                }
-                                 * @param str
-                                 */
+                                var peizhi_seleted;
+                                var jiag;
+                        
                                 function tsts(str) {
                                     document.getElementById('Label7').innerHTML = str;//底部显示选择的颜色
-                                    document.getElementById('Label5').innerHTML = "";//清空选择暗示重新选择，ajax操作是在选择配置的时候
+                                    document.getElementById('Label5').innerHTML = "";//清空选择暗示重新选择，ajax操作在下面
                                     color_seleted = encodeURI(str);                   
                                 }             
                                 function pzset(str) {
                                     document.getElementById('Label5').innerHTML = str;//底部显示选择的配置
-                                    var tts = encodeURI(str);
+                                   peizhi_seleted = encodeURI(str);
                                     var ajx = new XMLHttpRequest();
-                                    ajx.open("get", "XiangQingpage.aspx?peizhi=" + tts + "&pcolor=" + color_seleted, true); //不知道要不要带上颜色，不过颜色后台有存
+                                    ajx.open("get", "XiangQingpage.aspx?peizhi=" + peizhi_seleted + "&pcolor=" + color_seleted, true); //不知道要不要带上颜色，不过颜色后台有存
                                     ajx.send();
+                                }
+                                  function addtobag() {
+                                      var tts = encodeURI("true");
+                                      var confirmPrice = document.getElementById("Label1").innerText;
+                                      var pn = encodeURI(confirmPrice);
+                                      var ajx = new XMLHttpRequest();
+                                      ajx.open("get", "XiangQingpage.aspx?peizhi=" + peizhi_seleted + "&gettogwc=" + tts + "&pname=" + pn + "&pcolor=" + color_seleted, true); //带上配置吧。。pageload里有个判断……会把ajax刷新掉
+                                      ajx.send();
+                                      alert("添加到购物车成功啦(￣▽￣)");
+                                }
+                                function Buy_btn_Click() {
+                                      var tts = encodeURI("true");
+                                    var confirmPrice = document.getElementById("Label1").innerText;
+                                    jiag == document.getElementById("jg").innerText;
+                                      var pn = encodeURI(confirmPrice);
+                                    var ajx = new XMLHttpRequest();
+                                    ajx.open("get", "XiangQingpage.aspx?peizhi=" + peizhi_seleted + "&gettobuy=" + tts + "&pname=" + pn + "&pcolor=" + color_seleted + "&jiage=" + jiag, false); //带上配置吧。。pageload里有个判断……会把ajax刷新掉
+                                    ajx.send();                               
+                                        var a = ajx.responseText;
+                                      alert("执行111(￣▽￣)"+a);
+
+                                    jump(a);
+                                    return false;
+                                }
+                            
+                            
+                                function jump(ur) {
+                                      alert("执行(￣▽￣)"+ur);
+                                    window.location.href = ur;
+                                    return false;
                                 }
                             </script>                   
                         </div>                     
@@ -102,16 +124,20 @@
                            <button  type="button"  class="list-group-item"  onclick="pzset('<%=ppp%>')"  ><%=ppp%></button>                      
                             <%} %>              
                         </div>              
-                   
+                        <br/>
+                        <div style="width:100px;float:right;text-align:right;margin-right:100px">
+                             <label id="jg"  class="Lable_titletext2" style="font-weight:500" ><%=pjiage%></label>               
+                        </div>
                         </div>
                 </div>      
             <div style="height:70px;background-color:#f3f3f3;position:fixed;bottom:0px;width:100%">            
-                <asp:Label ID="Label6" CssClass="Lable_titletext2" Text="手机名字" runat="server" />
-                <label id="Label7" class="Lable_titletext_yspz" ></label>
+                <label id="Label1"  class="Lable_titletext2"><%=pname%></label>               
+                <asp:Label ID="Label6" Visible="false" CssClass="Lable_titletext2" Text="手机名字" runat="server" />
+                <label id="Label7"  class="Lable_titletext_yspz" ></label>
                 <label id="Label5" class="Lable_titletext_yspz" ></label>
                 <div style="width:auto;height:100%;padding:15px 20px 0 20px;background-color:#f3f3f3;float:right">
-                       <asp:Button Text="添加到购物车"  runat="server"   class="btncss_xq_black" />
-                      <asp:Button Text="一键购买"  BackColor="#ff3535" runat="server"   class="btncss_xq_black" />
+                       <button id="addtobag_btn"   type="button"   onclick="addtobag()"  class="btncss_xq_black" >添加到购物车</button>
+                      <button id="buy_btn"  onclick="Buy_btn_Click(); return false;"    style="background-color:#ff3535"   class="btncss_xq_black" >一键购买</button>
                 </div>
             </div>
         </div>
