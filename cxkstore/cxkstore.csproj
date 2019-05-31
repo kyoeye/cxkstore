@@ -77,9 +77,11 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\CXKstyle.css" />
+    <Content Include="css\DDstyle.css" />
     <Content Include="css\Gwcardstyle.css" />
     <Content Include="css\Masterstyle.css" />
     <Content Include="css\XQstyle.css" />
+    <Content Include="DDpage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="GongyinS.aspx" />
     <Content Include="Gouwuchepage.aspx" />
@@ -100,6 +102,7 @@
     <Content Include="Testpage.aspx" />
     <Content Include="mytestcontrol.ascx" />
     <Content Include="userControl\CardUserControl.ascx" />
+    <Content Include="userControl\DDitemUserControl.ascx" />
     <Content Include="userControl\GWcardUserControl.ascx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />
@@ -115,6 +118,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CXKdbml.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DDpage.aspx.cs">
+      <DependentUpon>DDpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DDpage.aspx.designer.cs">
+      <DependentUpon>DDpage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -190,6 +200,13 @@
     </Compile>
     <Compile Include="userControl\CardUserControl.ascx.designer.cs">
       <DependentUpon>CardUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\DDitemUserControl.ascx.cs">
+      <DependentUpon>DDitemUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userControl\DDitemUserControl.ascx.designer.cs">
+      <DependentUpon>DDitemUserControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="userControl\GWcardUserControl.ascx.cs">
       <DependentUpon>GWcardUserControl.ascx</DependentUpon>

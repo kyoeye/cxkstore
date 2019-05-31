@@ -19,7 +19,7 @@ namespace cxkstore
         public string Ct_addcontent { get { return ct_addcontent; } set { ct_addcontent= value; } }
         public string selectcolor;//当前选择的手机颜色 
         public string selectpeizhi;//当前选择的配置
-        public string pname;
+        public string pname,pjiage;
         //目前需要一个正则提取数据库返回的颜色 以空格区分
         public IList<string> mulist2 = new List<string>();
         public IList<string> peizhi_list = new List<string>();
@@ -59,6 +59,17 @@ namespace cxkstore
                 selectpeizhi = testtest;
                 GetdbContent();//list会丢据……再访问一次数据库……
                 addtobag_btn_Click();
+            }
+            var buy = Request.QueryString["gettobuy"];
+            if (buy != null)
+            {
+                pname = Request.QueryString["pname"];
+                selectcolor = Request.QueryString["pcolor"];
+                selectpeizhi = testtest;
+                pjiage = Request.QueryString["jiage"];
+                GetdbContent();
+                Buy_btn_Click();
+
             }
 
         }
@@ -108,7 +119,7 @@ namespace cxkstore
                             phonebrand = reader["phonebrand"].ToString(),
                             phonetext = reader["phonetext"].ToString(),
                         });
-                       
+                        pjiage = reader["phoneprice"].ToString();
                     }
                 }
                 try
@@ -159,6 +170,7 @@ namespace cxkstore
             }
         }
 
+
         /// <summary>
         /// 变量赋值给购物车的查询字串里的变量用
         /// </summary>
@@ -190,5 +202,21 @@ namespace cxkstore
             Ct_addcontent = string.Format("insert into GWCtable(userid,phonenum,shuliang,zhuangtai,ddcolor,ddpeizhi) values({0},{1},{2},{3},N'{4}',N'{5}')", uid, pnm, sl, zt, ddc, ddp);
             GetdbContent(Ct_addcontent);
         }
+        protected void Buy_btn_Click()
+        {
+            pnm = phonexinxis[0].phonenum;
+            ddc = selectcolor;
+            ddp = selectpeizhi;
+            string jump = "DDpage.aspx?uid=" + uid + "&pnm=" + pnm + "&color=" + ddc + "&peizhi=" + ddp ;
+            string[] stest = { pnm, ddc, ddp, pjiage };
+            Session["buy"] = stest;
+            Context.Response.Write(jump);
+            Response.End();
+            Response.Redirect(jump); //用了ajax这个跳转就会失效
+          //  this.Page.ClientScript.RegisterStartupScript(this.Page.GetType(), "", "<script language='javascript'>location.href = '"+jump+"'</script>", false);
+            this.Page.ClientScript.RegisterStartupScript(this.Page.GetType(), "", "<script language='javascript'>jump();</script>", false);
+
+        }
+
     }
 }
