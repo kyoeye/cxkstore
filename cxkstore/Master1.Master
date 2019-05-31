@@ -18,7 +18,7 @@
               <a href="Mainpage.aspx"  style="float:left;height:40px;width:40px;margin:0 auto;">
                   <asp:Image Height="25px"  CssClass="img_m"  ImageUrl="~/images/icon/lanqiu.png" runat="server" />
               </a>
-                <div style="float:right;padding:0px;;text-align:center">
+                <div style="float:right;padding:0px;text-align:center">
                     <asp:Button Text="亲，请登录！" ID="tologin"  runat="server"    OnClick="tologin_Click"    class="btncss_m_black" />
                     <asp:LinkButton ID="lnkbtnLogout" runat="server" Visible="false" OnClick="lnkbtnLogout_Click">退出登录</asp:LinkButton>
                      <a  href="~/Searchpage.aspx" class="a_m" runat="server">

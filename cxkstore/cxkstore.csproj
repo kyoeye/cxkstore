@@ -83,6 +83,7 @@
     <Content Include="Global.asax" />
     <Content Include="GongyinS.aspx" />
     <Content Include="Gouwuchepage.aspx" />
+    <Content Include="Guanlilogin.aspx" />
     <Content Include="GWCpage.aspx" />
     <Content Include="images\icon\gouwuchekong.png" />
     <Content Include="images\icon\lanqiu.png" />
@@ -93,7 +94,11 @@
     <Content Include="images\u=945315310,1576619437&amp;fm=11&amp;gp=0.jpg" />
     <Content Include="images\mainpage\wp.jpg" />
     <Content Include="Mainpage.aspx" />
+    <Content Include="Properties\DDGL.aspx" />
+    <Content Include="Properties\GYSGL.aspx" />
+    <Content Include="Properties\SJPAGL.aspx" />
     <Content Include="Searchpage.aspx" />
+    <Content Include="SPGL.aspx" />
     <Content Include="test2.aspx" />
     <Content Include="Testpage.aspx" />
     <Content Include="mytestcontrol.ascx" />
@@ -131,6 +136,13 @@
     <Compile Include="Gouwuchepage.aspx.designer.cs">
       <DependentUpon>Gouwuchepage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Guanlilogin.aspx.cs">
+      <DependentUpon>Guanlilogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Guanlilogin.aspx.designer.cs">
+      <DependentUpon>Guanlilogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GWCpage.aspx.cs">
       <DependentUpon>GWCpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -154,12 +166,40 @@
     </Compile>
     <Compile Include="Models\LiknModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\DDGL.aspx.cs">
+      <DependentUpon>DDGL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\DDGL.aspx.designer.cs">
+      <DependentUpon>DDGL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\GYSGL.aspx.cs">
+      <DependentUpon>GYSGL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\GYSGL.aspx.designer.cs">
+      <DependentUpon>GYSGL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\SJPAGL.aspx.cs">
+      <DependentUpon>SJPAGL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\SJPAGL.aspx.designer.cs">
+      <DependentUpon>SJPAGL.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Searchpage.aspx.cs">
       <DependentUpon>Searchpage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Searchpage.aspx.designer.cs">
       <DependentUpon>Searchpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SPGL.aspx.cs">
+      <DependentUpon>SPGL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SPGL.aspx.designer.cs">
+      <DependentUpon>SPGL.aspx</DependentUpon>
     </Compile>
     <Compile Include="test2.aspx.cs">
       <DependentUpon>test2.aspx</DependentUpon>
