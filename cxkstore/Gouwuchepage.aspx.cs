@@ -51,6 +51,7 @@ namespace cxkstore
         protected void goumai_btn_Click(object sender, EventArgs e)
         {
             Session["gwclist"] = gwcxinxis;
+
             GetdbContent("delete from GWCtable where gwcid > 0", "clear");
             this.Page.ClientScript.RegisterStartupScript(this.Page.GetType(), "", "<script language='javascript'>window.location.href = 'DDpage.aspx';</script>", false);
 
@@ -138,7 +139,7 @@ namespace cxkstore
                 control.GW_peizhi = gwcxinxis[i].ddpeizhi;
                 control.GW_gwcid = gwcxinxis[i].gwcid.ToString();
                 control.GW_sl = gwcxinxis[i].shuliang.ToString();
-                control.GW_imgUrl = "../images/" + gwcxinxis[i].phonename + "%20(1).jpg";//拼接图片地址
+                control.GW_imgUrl = "../images/" + gwcxinxis[i].phonename + "(1).jpg";//拼接图片地址
                 Ul1.Controls.Add(control);
             }
         }

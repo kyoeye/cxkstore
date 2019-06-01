@@ -23,7 +23,11 @@ namespace cxkstore
             Response.Redirect("UserLogin.aspx");
         }
  
-
+        /// <summary>
+        /// 注册
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void ZhuCebtn_Click(object sender, EventArgs e)
         {
             string Name, Sex, Password, DiZhi, PhoneNum;
@@ -36,7 +40,7 @@ namespace cxkstore
             }
             catch
             {
-                Sex = "0";
+                Sex = "0";//0男1女
             }
             PhoneNum = phonenum.Value;
 
@@ -48,7 +52,7 @@ namespace cxkstore
                 sqlc.Parameters.AddWithValue("@sex", Sex);
                 sqlc.Parameters.AddWithValue("@password", Password);//正常来说密码应该加密存储
                 sqlc.Parameters.AddWithValue("@phonenum", PhoneNum);
-                int m = sqlc.ExecuteNonQuery();
+                int m = sqlc.ExecuteNonQuery(); //数据库响应行数
                 if (m == 0)
                 {
                     test.Text = "注册失败！请重新注册。";

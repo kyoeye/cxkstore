@@ -33,12 +33,12 @@ namespace cxkstore
                 SqlCommand sqlc = sc.CreateCommand();
                 sc.Open();//打开数据库
                 sqlc.CommandText = string.Format(" Select* from Userdb where username = N'{0}' and password = @password", Name);
-                //Select * from Userdb where username = N'蔡徐坤' and password = '14564'
+                //Select * from Userdb where username = N'蔡徐坤' and password = '14564' //加N是因为中文乱码
                 sqlc.Parameters.AddWithValue("@password", Password);//正常来说密码应该加密存储
 
                 using (SqlDataReader reader = sqlc.ExecuteReader())
                 {
-                    while (reader.Read())
+                    while (reader.Read())//返回几行循环几次 只有一次
                     {
                         if(reader["password"].ToString()== Password)
                         {
@@ -52,7 +52,7 @@ namespace cxkstore
                            // LoginButton1.Text = "密码或用户名输入错误！"; 实际不走
                         }
                     }
-                    if(reader.HasRows==false)
+                    if(reader.HasRows==false)//查询失败没有row
                     {
                         LoginButton1.Text = "密码或用户名输入错误！";
                     }
