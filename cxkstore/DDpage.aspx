@@ -25,7 +25,7 @@
             
         <div style="height: 70px; width: 100%">
             <div style="width: auto; height: 100%; padding: 15px 20px 0 20px; float: right">
-                <asp:Button ID="goumai_btn" Text="结算" runat="server" CssClass="btncss_black" />
+                <asp:Button ID="goumai_btn" Text="结算" runat="server" OnClick="goumai_btn_Click" CssClass="btncss_black" />
             </div>
         </div>
              <div style="width:1000px" >

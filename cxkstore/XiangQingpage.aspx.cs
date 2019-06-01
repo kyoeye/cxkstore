@@ -71,7 +71,7 @@ namespace cxkstore
                 Buy_btn_Click();
 
             }
-
+            img1.Src = string.Format("~/images/{0}(1).jpg",pname);
         }
 
         /// <summary>
@@ -204,11 +204,12 @@ namespace cxkstore
         }
         protected void Buy_btn_Click()
         {
+            string name = phonexinxis[0].phonename;
             pnm = phonexinxis[0].phonenum;
             ddc = selectcolor;
             ddp = selectpeizhi;
             string jump = "DDpage.aspx?uid=" + uid + "&pnm=" + pnm + "&color=" + ddc + "&peizhi=" + ddp ;
-            string[] stest = { pnm, ddc, ddp, pjiage };
+            string[] stest = { pnm, ddc, ddp, pjiage, name };
             Session["buy"] = stest;
             Context.Response.Write(jump);
             Response.End();

@@ -39,8 +39,12 @@ namespace cxkstore
             {
                 ck.Values.Remove("tt2");
             }
-       
-                lnkbtnLogout.Visible = false;
+            HttpCookie ck2 = Response.Cookies["uid"];
+            if (ck2 != null)
+            {
+                ck2.Values.Remove("uid");
+            }
+            lnkbtnLogout.Visible = false;
                 Response.AddHeader("Refresh", "0");
        
  

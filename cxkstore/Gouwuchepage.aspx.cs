@@ -19,6 +19,7 @@ namespace cxkstore
    //     public string Ct_addcontent { get { return ct_addcontent; } set { value = string.Format("insert into GWCtable(userid,phonenum,shuliang,zhuangtai,ddcolor,ddpeizhi) values({0},{1},{2},{3},N'{4}',N'{5}')", uid, pnm, sl, zt, ddc, ddp); } }
 
         string uid, pnm, sl, zt = "0", ddc, ddp,gid;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //  Ct_rmcontentt=string.Format("delete from GWCtable where gwcid={0}')", gid); 
@@ -29,7 +30,9 @@ namespace cxkstore
                     var a = Request.QueryString["gwcdelete"];
                     ct_rmcontent =  string.Format("delete from GWCtable where gwcid='{0}'",a);
                     GetdbContent(ct_rmcontent, "delete");
-                  //要弄刷新页面
+                    //要弄刷新页面
+                    this.Page.ClientScript.RegisterStartupScript(this.Page.GetType(), "", "<script language='javascript'>window.location.href = 'Gouwuchepage.aspx';</script>", false);
+
                 }
                 else
                 {
@@ -42,12 +45,16 @@ namespace cxkstore
             catch
             {
                 Lable_tost.Visible = true;
-            }
-            
-
-
+            }           
         }
 
+        protected void goumai_btn_Click(object sender, EventArgs e)
+        {
+            Session["gwclist"] = gwcxinxis;
+            GetdbContent("delete from GWCtable where gwcid > 0", "clear");
+            this.Page.ClientScript.RegisterStartupScript(this.Page.GetType(), "", "<script language='javascript'>window.location.href = 'DDpage.aspx';</script>", false);
+
+        }
         //获取数据库时判断是否有数据，没有就显示当前购物车为空。
         //方案一页面的服务器控件发出删除事件，后台删除重新生成U1的列表，就是购物车移除操作，前台用js删除li
         //方案二页面动态生成用户控件，用js，类似详情页，然后用ajax发送数据后台执行删除，通过id索引，//不靠谱
@@ -98,12 +105,14 @@ namespace cxkstore
                 }
                 else if (dowhat == "delete")
                 {
-
                          if( sqlc.ExecuteNonQuery()!=0)//获取响应行数
                         this.Page.ClientScript.RegisterStartupScript(this.Page.GetType(), "", "<script language='javascript'>alert(\"删除成功啦￣▽\");</script>", false);
-
-                   
-
+                }
+                else if (dowhat=="clear")
+                {
+                    int m = sqlc.ExecuteNonQuery();
+                    //一键购买后清空购物车
+                    //没有代码
                 }
             }
         }

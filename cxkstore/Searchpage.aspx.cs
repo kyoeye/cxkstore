@@ -80,7 +80,7 @@ namespace cxkstore
                 control.jieShao = phonexinxis[i].pjieshao;
                 control.jiaGe = phonexinxis[i].price;//价格
            //     control.imgUrl = "../images/OPPO/OPPOreno%20(1).jpg";
-                 control.imgUrl = "../images/OPPO/" + phonexinxis[i].phonename + "%20(1).jpg";//拼接图片地址
+                 control.imgUrl = "../images/" + phonexinxis[i].phonename + "(1).jpg";//拼接图片地址
                 Ul1.Controls.Add(control);
             }
         }

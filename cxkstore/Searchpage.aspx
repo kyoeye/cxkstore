@@ -43,19 +43,17 @@
         }
     </style>
 </head>
-<body style="margin:0">
+<body>
     <div style="text-align:center">
         <div style="margin:auto;margin-bottom:20px;margin-top:20px;Width:480px; Height:45px">        
             <input type="text" id="search_textbox" name="search_textbox"  class="inputsty" style="float:left" runat="server"/> 
                   <a id="gga" style="background-color:#2e2e2e;border-bottom:0 #2e2e2e;float:left"  href="~/Searchpage.aspx" class="a_css" onserverclick="gga_ServerClick" runat="server">
                         <asp:Image  Height="18px" CssClass="img"  ImageUrl="~/images/icon/sousuo.png"  runat="server"/>
                     </a>
-</div>
+            </div>
         <asp:Label ID="Tostlable" Text="抱歉，这个真没有" Visible="false" CssClass="zw" runat="server" />
          <ul id="Ul1" style="padding-left:0"  runat="server" />    
-
         </div>
-    </div>
 </body>
 </html>
     </asp:Content>
