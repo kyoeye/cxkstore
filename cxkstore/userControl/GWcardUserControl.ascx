@@ -30,7 +30,9 @@
                                       var ajx = new XMLHttpRequest();
                                       ajx.open("get", "Gouwuchepage.aspx?gwcdelete=" + i , true); 
                                       ajx.send();
-                                      alert("ajax执行成功啦(￣▽￣)"+i);
+                                    alert("删除成功啦(￣▽￣)" + i);
+                                     window.location.href = 'Gouwuchepage.aspx';
+                                     return false;
                                 }
                 </script>
                 <div  style="text-align:center">

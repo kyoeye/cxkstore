@@ -16,6 +16,7 @@ namespace cxkstore.userControl
             label_dpeizhi.Text = ppeizhi;
             label_jiage.Text = pjiage+"元";
             span_shuliang.InnerText ="x"+pshuliang;
+            label_time.Text = ptime;
 
         }
         public string pname { get; set; }
@@ -23,5 +24,6 @@ namespace cxkstore.userControl
         public string ppeizhi { get; set; }
         public string pjiage { get; set; }
         public string pshuliang{ get; set; }
+        public string ptime{ get; set; }
     }
 }

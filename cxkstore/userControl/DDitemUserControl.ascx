@@ -16,6 +16,7 @@
                 <asp:Label ID="label_dname" Text="手机名" CssClass="lab" runat="server" />
                 <asp:Label ID="label_dcolor" Text="颜色" CssClass="lab"  runat="server" />
                 <asp:Label ID="label_dpeizhi" Text="配置" CssClass="lab"  runat="server" />
+                <asp:Label ID="label_time" Text="1989.6.4" CssClass="lab"  runat="server" />
             </td>
                <td style="line-height:60px;width:149px;text-align:right;padding-right:10px">
                 <asp:Label ID="label_jiage" Text="2333元" CssClass="lab"  runat="server" />

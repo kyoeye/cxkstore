@@ -34,7 +34,7 @@
                             <tr>
                                 <td>
                                     <div id="imgg" runat="server" style="display: table-cell; width: 550px; vertical-align: central; height: 500px; overflow: hidden; margin: auto; text-align: center; background-color: white; float: left">
-                                        <img style="margin: auto; position: center; height: 500px" src="~/images/OPPO/OPPOreno (1).jpg" runat="server" />
+                                        <img id="img1" style="margin: auto; position: center; height: 500px" src="~/images/<%=pname%>(1).jpg" runat="server" />
                                     </div>
                                 </td>
                             </tr>
@@ -102,15 +102,12 @@
                                     ajx.open("get", "XiangQingpage.aspx?peizhi=" + peizhi_seleted + "&gettobuy=" + tts + "&pname=" + pn + "&pcolor=" + color_seleted + "&jiage=" + jiag, false); //带上配置吧。。pageload里有个判断……会把ajax刷新掉
                                     ajx.send();                               
                                         var a = ajx.responseText;
-                                      alert("执行111(￣▽￣)"+a);
-
                                     jump(a);
                                     return false;
                                 }
                             
                             
                                 function jump(ur) {
-                                      alert("执行(￣▽￣)"+ur);
                                     window.location.href = ur;
                                     return false;
                                 }
