@@ -32,6 +32,7 @@ namespace cxkstore
             {
                 SqlCommand sqlc = sc.CreateCommand();
                 sc.Open();//打开数据库
+                //查询字串
                 sqlc.CommandText = string.Format(" Select* from Userdb where username = N'{0}' and password = @password", Name);
                 //Select * from Userdb where username = N'蔡徐坤' and password = '14564' //加N是因为中文乱码
                 sqlc.Parameters.AddWithValue("@password", Password);//正常来说密码应该加密存储
@@ -40,8 +41,9 @@ namespace cxkstore
                 {
                     while (reader.Read())//返回几行循环几次 只有一次
                     {
-                        if(reader["password"].ToString()== Password)
+                        if(reader["password"].ToString()== Password)//密码判断
                         {
+                            //用cookie存储登录信息
                              Response.Cookies["tt2"].Value = HttpUtility.UrlEncode(Name); //创建cookie，用urlencode编码解决中文乱码，读取的时候再转换回来就行
                              Response.Cookies["uid"].Value = HttpUtility.UrlEncode(reader["userid"].ToString()); //创建cookie，用urlencode编码解决中文乱码，读取的时候再转换回来就行
                             // Response.Cookies.Remove("tt2");

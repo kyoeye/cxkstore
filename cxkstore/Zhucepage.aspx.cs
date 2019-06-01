@@ -31,6 +31,7 @@ namespace cxkstore
         protected void ZhuCebtn_Click(object sender, EventArgs e)
         {
             string Name, Sex, Password, DiZhi, PhoneNum;
+            //用户输入的东西放到变量方便查询
             Name = username.Value;
             Password = password.Value;
             DiZhi = dizhi.Value;
